@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="32">
+  <defs>
+    <style>
+      .cls {
+        fill: none;
+        stroke: #777777;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+      }
+
+      .cls:hover{
+        stroke: #ffea00;
+      }
+    </style>
+  </defs>
+  <polyline class="cls" points="250,290 260,320 245,350 260,380 245,410 260,440" stroke="brown" fill="none"/>
+</svg>

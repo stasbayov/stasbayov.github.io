@@ -1,0 +1,320 @@
+@font-face {
+  font-family: 'robotolight';
+  src: url('../fonts/robotolight.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: 'roboto-regular';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+html,
+body {
+  position: relative;
+  /*width: 1920px;*/
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 800px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+#carousel a {
+  z-index: 10;
+  top: 46%;
+}
+
+#carousel .svg-left{
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+#carousel a.left::before {
+  content: '';
+  position: absolute;
+  border: 100px solid transparent;
+  border-left: 100px solid white;
+  left: 0;
+  bottom: -80px;
+  z-index: -1;
+}
+
+#carousel .svg-right{
+  position: absolute;
+  top: 5px;
+  left: 40px;
+}
+
+#carousel a.right::before{
+  content: '';
+  position: absolute;
+  border: 100px solid transparent;
+  border-right: 100px solid white;
+  right: 0;
+  bottom: -80px;
+  z-index: -1;
+}
+
+.carousel-control {
+  opacity: 0.9;
+}
+.carousel-control:hover polyline {
+  stroke: #ffea00;
+}
+.carousel-control.right,
+.carousel-control.left {
+  width: 103px;
+  height: 62px;
+}
+a.carousel-control.right,
+a.carousel-control.left {
+  background: none;
+}
+.filler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.logo {
+  padding: 0;
+  top: 40px;
+  left: 0;
+}
+.menu {
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  font-family: 'robotolight', Sans-Serif;
+}
+.menu ul {
+  margin-top: 27px;
+  text-align: right;
+}
+.menu a {
+  color: #001111;
+}
+.menu a:hover {
+  text-decoration: none;
+}
+.menu ul li:first-child {
+  padding: 0;
+}
+.menu ul li:first-child a {
+  margin-right: 15px;
+}
+.menu ul li:nth-child(2) {
+  color: white;
+  margin: 0;
+}
+.menu ul li:nth-child(3) {
+  margin: 0;
+}
+.menu ul li:nth-child(3) a {
+  word-spacing: 2px;
+  padding-right: 2px;
+  margin-left: 15px;
+}
+.modalwindow {
+  z-index: 10;
+  right: 0;
+  top: 92px;
+}
+.btn-modalwindow {
+  color: #f9bf3a;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-family: "roboto-regular", Sans-Serif;
+  font-size: 18px;
+  padding: 10px 50px;
+  z-index: 10;
+  margin-top: 25px;
+}
+.line2 {
+  padding-top: 68px;
+  position: relative;
+}
+.line2 h2 {
+  font-family: 'Roboto-Bold', Sans-Serif;
+}
+.make-and-sale {
+  max-width: 833px;
+  word-break: break-all;
+}
+.make-and-sale.col-sm-8 {
+  padding: 0;
+  word-break: normal;
+}
+.make-and-sale p {
+  font-family: 'roboto-regular', Sans-Serif;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.9;
+}
+.make-and-sale p:first-of-type {
+  margin-top: 68px;
+}
+.make-and-sale p:last-of-type {
+  margin-top: 30px;
+}
+.caption {
+  display: inline-block;
+  position: relative;
+}
+.under-yellow {
+  background-color: yellow;
+  height: 5px;
+  position: absolute;
+  right: 0;
+  width: 10000px;
+}
+.contacts {
+  padding-left: 26px;
+  position: absolute;
+  width: 32%;
+  background: #f5f5f5;
+  height: 337px;
+  z-index: 20;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  padding-top: 68px;
+}
+
+.contacts h2{
+  margin-bottom: 33px;
+}
+
+.contacts p:first-of-type {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.contacts p {
+  font-size: 15px;
+}
+
+.adress{
+  margin-top: 29px;
+}
+
+.adress p{
+  margin-top: 53px;
+
+}
+
+.fa-map-marker{
+  color: #ffea00;
+  margin-right: 13px;
+}
+
+#map_canvas{
+  margin-top: 37px;
+}
+
+.line4{
+  height: 77px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 77px;
+}
+
+.line4 p{
+  font-family: 'roboto-regular', Sans-Serif;
+  font-size: 14px;
+  color: #777777;
+}
+
+@media (max-width: 767px) {
+  .logo,
+  .menu,
+  .modalwindow
+   {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+
+  .contacts{
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .menu ul {
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .menu li {
+    display: block;
+    text-align: center;
+  }
+  .menu ul li:first-child {
+    margin-right: 0;
+  }
+  .menu ul li:nth-child(2) {
+    display: none;
+  }
+  .menu ul li:nth-child(3) a {
+    margin-left: 0;
+  }
+  .modalwindow {
+    display: block;
+    text-align: center;
+    top: 23px;
+  }
+  .btn-modalwindow {
+    background: black;
+  }
+  .ratio-16-9 {
+    display: none;
+  }
+  .filler {
+    position: relative;
+  }
+}
+@media (max-width: 1036px) {
+  .menu ul li:first-child a{
+    margin-right: 0;
+  }
+  .menu li:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px){
+  p{
+    padding: 10px;
+  }
+}
