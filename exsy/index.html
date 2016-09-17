@@ -10,14 +10,17 @@
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <script src="js/jquery-3.1.0.min.js"></script>
     <![endif]-->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
-     <script src="//maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyBaf2TDn6NaV7hlOhCXlpndIC7Yet0_xX8&sensor=true_or_false"
+
+    <script src="//maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyBaf2TDn6NaV7hlOhCXlpndIC7Yet0_xX8&sensor=true_or_false"
             type="text/javascript"></script>
+
     <script type="text/javascript">
 
         function initialize() {
@@ -28,7 +31,6 @@
         }
 
     </script>
-   
 
 </head>
 <body onload="initialize()" onunload="GUnload()">
@@ -49,14 +51,14 @@
                             </div>
                         </div>
                         <a href="#carousel" class="left carousel-control" data-slide="prev">
-                            <svg class="svg-left" style="width: 40px; height: 50px; " >
-                                <polyline points="41,36, 5,36 16,26 5,36 16,46" stroke="#777777" stroke-width="6px" fill="none" stroke-linecap="round"
+                            <svg class="svg-left" style="width: 45px; height: 55px; " >
+                                <polyline points="41,36, 5,36 16,24 5,36 16,48" stroke="#777777" stroke-width="6px" fill="none" stroke-linecap="round"
                                           stroke-linejoin="round"></polyline>
                             </svg>
                         </a>
                         <a href="#carousel" class="right carousel-control" data-slide="next">
-                            <svg class="svg-right" style="width: 40px; height: 50px">
-                                <polyline points="0,36 36,36 25,26 36,36 26,46" stroke="#777777" stroke-width="6px" fill="none" stroke-linecap="round"
+                            <svg class="svg-right" style="width: 45px; height: 55px">
+                                <polyline points="5,36 41,36 30,24 41,36 30,48" stroke="#777777" stroke-width="6px" fill="none" stroke-linecap="round"
                                           stroke-linejoin="round"></polyline>
                             </svg>
                         </a>
@@ -166,10 +168,10 @@
             $("#menu").on("click","a", function (event) {
                 var id = $(this).attr('href'),
                         top = $(id).offset().top;
-                $('body,html').animate({scrollTop: top-70}, 1500);
+                $('body,html').animate({scrollTop: top}, 1500);
             });
         });
     </script>
-    
+    <script src="js/action.js"></script>
 </body>
 </html>
