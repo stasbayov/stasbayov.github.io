@@ -16,7 +16,18 @@
     <![endif]-->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
+     <script src="//maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyBaf2TDn6NaV7hlOhCXlpndIC7Yet0_xX8&sensor=true_or_false"
+            type="text/javascript"></script>
+    <script type="text/javascript">
 
+        function initialize() {
+            if (GBrowserIsCompatible()) {
+                var map = new GMap2(document.getElementById("map_canvas"));
+                map.setCenter(new GLatLng(54.2101428,36.6139642), 10);
+            }
+        }
+
+    </script>
    
 
 </head>
@@ -159,17 +170,6 @@
             });
         });
     </script>
-     <script src="//maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyBaf2TDn6NaV7hlOhCXlpndIC7Yet0_xX8&sensor=true_or_false"
-            type="text/javascript"></script>
-    <script type="text/javascript">
-
-        function initialize() {
-            if (GBrowserIsCompatible()) {
-                var map = new GMap2(document.getElementById("map_canvas"));
-                map.setCenter(new GLatLng(54.2101428,36.6139642), 10);
-            }
-        }
-
-    </script>
+    
 </body>
 </html>
