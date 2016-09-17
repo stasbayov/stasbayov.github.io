@@ -47,7 +47,7 @@ li {
 #carousel .svg-left{
   position: absolute;
   top: 5px;
-  left: 20px;
+  left: 21px;
 }
 
 #carousel a.left::before {
@@ -63,7 +63,7 @@ li {
 #carousel .svg-right{
   position: absolute;
   top: 5px;
-  left: 40px;
+  left: 37px;
 }
 
 #carousel a.right::before{
@@ -120,7 +120,13 @@ a.carousel-control.left {
 }
 .menu a:hover {
   text-decoration: none;
+  color: #ffea00;
 }
+
+.menu a:active {
+  font-weight: bold;
+}
+
 .menu ul li:first-child {
   padding: 0;
 }
@@ -155,6 +161,11 @@ a.carousel-control.left {
   z-index: 10;
   margin-top: 25px;
 }
+
+.btn-modalwindow:active{
+  background: black;
+}
+
 .line2 {
   padding-top: 68px;
   position: relative;
@@ -178,9 +189,12 @@ a.carousel-control.left {
 }
 .make-and-sale p:first-of-type {
   margin-top: 68px;
+  margin-bottom: 30px;
+  padding-left: 0;
 }
 .make-and-sale p:last-of-type {
-  margin-top: 30px;
+  margin-top: 0;
+  padding-left: 0;
 }
 .caption {
   display: inline-block;
@@ -192,7 +206,13 @@ a.carousel-control.left {
   position: absolute;
   right: 0;
   width: 10000px;
+  border: none;
 }
+
+.make-and-sale .under-yellow{
+  top: 37px;
+}
+
 .contacts {
   padding-left: 26px;
   position: absolute;
@@ -208,24 +228,39 @@ a.carousel-control.left {
 
 .contacts h2{
   margin-bottom: 33px;
+  margin-top: 22px;
+}
+
+.contacts p {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
 }
 
 .contacts p:first-of-type {
   font-size: 16px;
-  margin-bottom: 8px;
   font-weight: bold;
 }
-.contacts p {
-  font-size: 15px;
+
+.contacts p:nth-of-type(2){
+  margin-top: 6px;
+}
+
+.contacts p:last-of-type{
+  margin-top: 9px;
 }
 
 .adress{
-  margin-top: 29px;
+  margin-top: 28px;
 }
 
 .adress p{
-  margin-top: 53px;
+  margin-top: 52px;
+  padding-left: 0;
+}
 
+.adress .under-yellow{
+  top: 36px;
 }
 
 .fa-map-marker{
@@ -234,7 +269,11 @@ a.carousel-control.left {
 }
 
 #map_canvas{
-  margin-top: 37px;
+  margin-top: 29px;
+}
+
+.line3{
+  padding-top: 9px;
 }
 
 .line4{
@@ -248,9 +287,21 @@ a.carousel-control.left {
   font-family: 'roboto-regular', Sans-Serif;
   font-size: 14px;
   color: #777777;
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+
+@media (max-width: 522px){
+  .make-and-sale .under-yellow{
+    top: 50px;
+  }
 }
 
 @media (max-width: 767px) {
+  .line1{
+    background: #f5f5f5;
+  }
+
   .logo,
   .menu,
   .modalwindow
@@ -260,10 +311,27 @@ a.carousel-control.left {
     right: 0;
   }
 
+  .modalwindow{
+    top: 0;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .btn-modalwindow{
+    margin-top: 0;
+    background: black;
+  }
+
+  .btn-modalwindow:active{
+    background: white;
+  }
+
   .contacts{
     position: relative;
     width: 100%;
     text-align: center;
+    padding: 50px 0 0;
   }
 
   .logo {
@@ -289,20 +357,28 @@ a.carousel-control.left {
   .menu ul li:nth-child(3) a {
     margin-left: 0;
   }
-  .modalwindow {
-    display: block;
-    text-align: center;
-    top: 23px;
-  }
-  .btn-modalwindow {
-    background: black;
-  }
+
   .ratio-16-9 {
     display: none;
   }
   .filler {
     position: relative;
   }
+
+  .line2{
+    padding-top: 15px;
+  }
+
+  .make-and-sale p:first-of-type{
+    margin-top: 30px;
+  }
+
+  .make-and-sale p:first-of-type,
+  .make-and-sale p:last-of-type,
+  .adress p {
+    padding-right: 10px;
+  }
+
 }
 @media (max-width: 1036px) {
   .menu ul li:first-child a{
@@ -313,8 +389,18 @@ a.carousel-control.left {
   }
 }
 
+@media (min-width: 768px) and (max-width: 798px){
+  .make-and-sale .under-yellow{
+    top: 50px;
+  }
+}
+
 @media (max-width: 1200px){
-  p{
-    padding: 10px;
+  .make-and-sale p:first-of-type,
+  .make-and-sale h2,
+  .make-and-sale p:last-of-type,
+  .adress h2,
+  .adress p{
+    padding-left: 10px;
   }
 }
