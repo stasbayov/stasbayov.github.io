@@ -114,6 +114,7 @@ a.carousel-control.left {
 .menu ul {
   margin-top: 27px;
   text-align: right;
+  padding-left: 0;
 }
 .menu a {
   color: #001111;
@@ -160,6 +161,10 @@ a.carousel-control.left {
   padding: 10px 50px;
   z-index: 10;
   margin-top: 25px;
+}
+
+.btn-modalwindow:hover{
+  background-color: #eeeeee;
 }
 
 .btn-modalwindow:active{
@@ -323,6 +328,10 @@ a.carousel-control.left {
     background: black;
   }
 
+  .btn-modalwindow:hover{
+    background-color: #eeeeee;
+  }
+
   .btn-modalwindow:active{
     background: white;
   }
@@ -380,7 +389,7 @@ a.carousel-control.left {
   }
 
 }
-@media (max-width: 1050px) {
+@media (max-width: 1126px) {
   .menu ul li:first-child a{
     margin-right: 0;
   }
@@ -395,12 +404,18 @@ a.carousel-control.left {
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .make-and-sale p:first-of-type,
   .make-and-sale h2,
   .make-and-sale p:last-of-type,
   .adress h2,
-  .adress p{
+  .adress p {
     padding-left: 10px;
+  }
+}
+
+@media (max-width: 1240px){
+  .filler .wrapper .row{
+    padding: 0 4% 0 4%;
   }
 }
