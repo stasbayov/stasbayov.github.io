@@ -380,7 +380,7 @@ a.carousel-control.left {
   }
 
 }
-@media (max-width: 1036px) {
+@media (max-width: 1050px) {
   .menu ul li:first-child a{
     margin-right: 0;
   }
