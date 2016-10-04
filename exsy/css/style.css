@@ -296,7 +296,7 @@ a.carousel-control.left {
   margin: 0;
 }
 
-@media (max-width: 522px){
+@media (max-width: 532px){
   .make-and-sale .under-yellow{
     top: 50px;
   }
