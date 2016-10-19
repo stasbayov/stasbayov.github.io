@@ -94,8 +94,8 @@ html, body{
 #up{
 	opacity: 0.3;
 	position: fixed;
-	right: 200px;
-	bottom: 200px;
+	right: 10px;
+	bottom: 10px;
 	color: white;
 	z-index: 100;
 	text-decoration: none;
@@ -113,8 +113,12 @@ html, body{
 	opacity: 1;
 }
 
-header{
+.header{
 	min-height: 80px;
+}
+
+.header-responsive{
+	height: 150px;
 }
 
 .navbar{
@@ -273,7 +277,7 @@ a.carousel-control.left {
 
 .whoweare{
 	position: relative;
-	min-height: 740px;
+	min-height: 500px;
 	padding-top: 50px;
 	text-align: center;
 	color: #3f444a;
@@ -287,7 +291,7 @@ a.carousel-control.left {
 }
 
 .whoweare .collapse p{
-	padding-top: 40px;
+	padding: 40px 20px;
 	font-size: 18px;
 	width: 850px;
 	display: inline-block;
@@ -303,6 +307,14 @@ a.carousel-control.left {
 .whoweare .panel-heading{
 	background-color: #3f444a;
 	color: white;
+}
+
+.whoweare .panel-heading:active{
+	background-color: #ec4848;
+}
+
+.whoweare .panel-group{
+	margin-bottom: 0;
 }
 
 .statistics{
@@ -339,12 +351,7 @@ a.carousel-control.left {
 }
 
 .menu>li:hover{
-	background-color: #ec4848;
 	cursor: pointer;
-}
-
-.menu li:nth-child(2){
-	background-color: #ec4848;
 }
 
 .describe{
@@ -367,12 +374,15 @@ a.carousel-control.left {
 	font-family: 'RobotoCondensed-Bold', sans-serif;
 }
 
-.statistics .submenu{
+.col-sm-6 .submenu{
 	font-family: 'RobotoCondensed-Bold', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .submenu li{
-	margin-bottom: 3%;
+	width: 100%;
 	background-color: #f8f8f8;
 	list-style: none;
 	border: 1px solid #d7d7d7;
@@ -656,6 +666,10 @@ input[type="radio"]{
 	color: white;
 }
 
+.square:hover{
+	background-color: rgba(236,72,72, 1);
+}
+
 .square img{
 	width: 58px;
 	height: 52px;
@@ -748,7 +762,7 @@ input[type="radio"]{
 	text-align: center;
 	max-width: 268px;
 	font-size: 18px;
-	letter-spacing: 0.5em;
+	letter-spacing: 0.2em;
 }
 
 .meet figure:hover figcaption p a{
@@ -859,18 +873,27 @@ input[type="radio"]{
 }
 
 .icons{
-	height: 350px;
+	height: 130px;
 	color: #3f444a;
 	text-align: center;
 }
 
-.icons figure div .layericon{
+.icons figure .work{
+	filter: grayscale(1);
+}
+
+.icons figure .work:hover {
+	z-index: 200;
+	filter: grayscale(0);
+}
+
+.icons figure .work .layericon{
 	background-image: url("../images/Layericon.png");
 	position: relative;
 	width: 31px;
 	height: 32px;
 	display: inline-block;
-	filter: grayscale(1);
+
 }
 
 .icons figure .graphicriver:after{
@@ -897,9 +920,40 @@ input[type="radio"]{
 	background-blend-mode: overlay;
 }
 
-.icons figure div:hover .layericon{
-	z-index: 200;
-	filter: grayscale(0);
+.icons figure .audiojungle:after{
+	position: absolute;
+	content: '';
+	top: 4px;
+	right: -3px;
+	width: 30px;
+	height: 32px;
+	z-index: 100;
+	background-image: url("../images/audiojungle.png");
+	background-blend-mode: overlay;
+}
+
+.icons figure .codecanyon:after{
+	position: absolute;
+	content: '';
+	top: 1px;
+	right: -3px;
+	width: 33px;
+	height: 27px;
+	z-index: 100;
+	background-image: url("../images/codecanyon.png");
+	background-blend-mode: overlay;
+}
+
+.icons figure .activeden:after{
+	position: absolute;
+	content: '';
+	top: 5px;
+	left: 3px;
+	width: 28px;
+	height: 27px;
+	z-index: 100;
+	background-image: url("../images/actieveden.png");
+	background-blend-mode: overlay;
 }
 
 .icons h1{
@@ -931,7 +985,6 @@ input[type="radio"]{
 	background-color: #312b2b;
 	color: #cccccc;
 	font-size: 16px;
-
 }
 
 .subscribe .wrapper{
@@ -948,7 +1001,7 @@ input[type="radio"]{
 input[type="email"]{
 	position: absolute;
 	right: 0;
-	top: 10px;
+	top: 20px;
 	height: 40px;
 	width: 320px;
 	padding-left: 20px;
@@ -958,8 +1011,8 @@ input[type="email"]{
 input[type="submit"]{
 	position: absolute;
 	right: 0;
-	top: 10px;
-	height: 45px;
+	top: 20px;
+	height: 40px;
 	background-color: #ec4848;
 	border: none;
 	font-family: 'Glyphter', sans-serif;
@@ -977,7 +1030,7 @@ footer{
 .column{
 	display: inline-block;
 	color: white;
-	max-width: 320px;
+	max-width: 24%;
 	vertical-align: top;
 }
 
@@ -987,12 +1040,16 @@ footer{
 	margin-bottom: 40px;
 }
 
-.column span{
+.column span {
 	font-family: 'Glyphter', sans-serif;
 	color: #3f444a;
 	background-color: white;
 	font-size: 20px;
-	padding: 20px;
+	display: inline-block;
+	height: 54px;
+	width: 54px;
+	line-height: 54px;
+	vertical-align: middle;
 }
 
 .column h1{
@@ -1043,17 +1100,30 @@ footer{
 	margin: 2px;
 }
 
-.bottom{
+.footer-bottom{
+	position: relative;
+	height: 90px;
+	background-color: #151515;
+}
+
+.bottomline{
+	bottom: 90px;
+	margin: 0;
 	position: absolute;
-	max-width: 100%;
+	width: 100%;
+	border-color: #534a4a;
+	border-width: 3px;
+}
+
+.bottom{
+	width: 100%;
 	bottom: 0;
-	height: 80px;
+	height: 90px;
 	color: #c5c5c5;
-	border-top: 3px solid #534a4a;
 }
 
 .bottom p{
-	margin: 30px 120px;
+	margin: 30px 120px 0 0;
 	float: left;
 }
 
@@ -1065,10 +1135,18 @@ footer{
 	float: right;
 	text-align: right;
 	font-family: 'Glyphter', sans-serif;
-	margin: 30px 120px;
-	color: #737373;
-	letter-spacing: 20px;
+	margin: 30px 0;
+	letter-spacing: 0.4em;
 	font-size: 20px;
+}
+.icon a{
+	color: #737373;
+}
+
+@media (max-width: 336px) {
+	main .whatweoffer{
+	min-height: 1070px;
+	}
 }
 
 @media (max-width: 338px){
@@ -1077,15 +1155,21 @@ footer{
 	}
 }
 
-@media (max-width: 404px){
-	main .join .filler .wrapper h3{
-		font-size: 30px;
+@media (max-width: 373px) {
+	.whatweoffer{
+		min-height: 1000px;
 	}
 }
 
-@media (max-width: 337px) {
-	main .whatweoffer{
-		height: 1100px;
+@media (max-width: 375px){
+	.subscribe input[type="email"]{
+		width: 82%;
+	}
+}
+
+@media (max-width: 404px){
+	main .join .filler .wrapper h3{
+		font-size: 30px;
 	}
 }
 
@@ -1107,18 +1191,23 @@ footer{
 	}
 }
 
-@media (max-width: 529px){
-	.whatweoffer{
-		min-height: 1000px;
+@media (max-width: 485px){
+	.whatweoffer p{
+		margin: 20px 0 20px 20px;
 	}
+	.whatweoffer figcaption{
+		max-width: 85%;
+	}
+}
 
+@media (max-width: 529px){
 	.whatweoffer img{
 		display: block;
 		margin: 0 auto;
 	}
 	.whatweoffer figcaption, .whatweoffer h2{
-		margin: 0;
-		text-align: center;
+		margin: 0 0 0 20px;
+
 	}
 }
 
@@ -1155,7 +1244,7 @@ footer{
 }
 
 @media (max-width: 933px){
-	header{
+	.header{
 		min-height: 100px;
 	}
 
@@ -1170,9 +1259,9 @@ footer{
 	}
 }
 
-@media (max-width: 1064px){
+@media (max-width: 986px){
 	.whatweoffer{
-		height: 650px;
+		height: 800px;
 	}
 }
 
@@ -1219,8 +1308,16 @@ footer{
 
 
 @media (max-width: 767px){
+	.whoweare{
+		min-height: 750px;
+	}
+
 	.whoweare #accordion, .whoweare .col-sm-6:last-child{
 		padding: 0;
+	}
+
+	.whoweare .panel-group{
+		margin-bottom: 20px;
 	}
 
 	.ourservice{
@@ -1320,6 +1417,10 @@ footer{
 		margin-bottom: 5px;
 	}
 
+	.icons{
+		height: 350px;
+	}
+
 	.icons figure{
 		display: block;
 	}
@@ -1338,5 +1439,29 @@ footer{
 		float: none;
 		display: inline-block;
 		margin: 0;
+	}
+
+	.subscribe{
+		height: 130px;
+	}
+
+	.subscribe p{
+		display: block;
+		width: 100%;
+		position: relative;
+	}
+
+	.subscribe form{
+		position: relative;
+		margin-top: 30px;
+	}
+
+	.subscribe input{
+		position: relative;
+		display: inline-block;
+	}
+
+	.subscribe input[type="email"]{
+		vertical-align: top;
 	}
 }
