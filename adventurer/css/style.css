@@ -180,6 +180,7 @@ html, body{
 
 .mainmenu input{
 	border: none;
+	width: 145px;
 }
 
 /*header end*/
