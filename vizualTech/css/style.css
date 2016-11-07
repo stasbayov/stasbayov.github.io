@@ -161,6 +161,11 @@ main .menu>ul a{
     color: #5a5a5a;
 }
 
+main .menu>ul li:hover {
+    border-top: 2px solid #1c285b;
+    line-height: 54px;
+}
+
 main .menu>ul a:hover{
     color: #1d275a;
 }
@@ -542,6 +547,7 @@ main .examples .filler .row figcaption{
     width: 13%;
     background: none;
     font-size: 20px;
+    line-height: 28px;
     padding-top: 4.5px;
     padding-bottom: 7.5px;
 }
@@ -568,4 +574,16 @@ main .examples .filler .row figcaption{
 
 .footer-bottom a{
     color: #959595;
+}
+
+@media (max-width: 1058px){
+    .footer-top .company{
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .examples figure, .examples .hover, .examples .filler .row div:hover .hover-text{
+        max-width: 100%;
+    }
 }
