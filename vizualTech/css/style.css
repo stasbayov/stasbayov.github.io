@@ -542,8 +542,8 @@ main .examples .filler .row figcaption{
     width: 13%;
     background: none;
     font-size: 20px;
-    padding-top: 4px;
-    padding-bottom: 8px;
+    padding-top: 4.5px;
+    padding-bottom: 7.5px;
 }
 
 .footer-bottom{
