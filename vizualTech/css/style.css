@@ -150,21 +150,29 @@ main .menu>ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 3px 26px 0 28px;
+    /*padding: 3px 26px 0 28px;*/
     height: 58px;
     font-family: "futura-lt", Sans-Serif;
     font-size: 14px;
-    line-height: 58px;
+    line-height: 68px;
     vertical-align: middle;
+}
+
+main .menu>ul:first-of-type li{
+    margin-right: -23px;
+}
+
+main .menu>ul:last-of-type li{
+    margin-right: -34px;
 }
 
 main .menu>ul a{
     color: #5a5a5a;
 }
 
-main .menu>ul li:hover {
-    border-top: 2px solid #1c285b;
-    line-height: 54px;
+main .menu>ul>li:hover {
+    border-top: 3px solid #1c285b;
+    line-height: 62px;
 }
 
 main .menu>ul a:hover{
@@ -218,7 +226,8 @@ main .background{
 }
 
 main .background .filler{
-    top: 58px
+    position: absolute;
+    top: 58px;
 }
 
 main .background .filler img{
@@ -229,15 +238,6 @@ main .background .filler img{
 .peble-paper{
     position: relative;
     min-height: 578px;
-}
-
-main .peble-paper .col-sm-6:first-of-type{
-    width: 47%;
-}
-
-main .peble-paper .col-sm-6:last-of-type{
-    width: 53%;
-    padding-right: 21px;
 }
 
 main .peble-paper .col-sm-6{
@@ -255,7 +255,7 @@ main .peble-paper h2{
 }
 
 main .peble-paper .text{
-    padding: 61px 50px 40px 28px;
+    padding: 63px 30px 40px 14px;
     font-family: 'lucidaGrande', Sans-Serif;
     color: #787878;
     font-size: 13px;
@@ -577,13 +577,60 @@ main .examples .filler .row figcaption{
     color: #959595;
 }
 
-@media (max-width: 767px){
-    .peble-paper .col-sm-6:first-of-type{
-        width: 100% !important;
+
+@media (max-width: 784px){
+    main .menu>ul:last-child li:nth-child(2){
+        line-height: 17px;
+    }
+}
+
+@media (max-width: 900px){
+    main .menu>ul:last-child li:first-child{
+        line-height: 17px;
     }
 }
 
 @media (max-width: 991px){
+    main .menu>ul{
+        height: 33px;
+        line-height: 40px;
+    }
+
+    main .menu>ul li{
+        width: 20%;
+        text-align: center;
+    }
+
+    main .menu>ul>li:hover{
+        line-height: 34px;
+    }
+
+    .filler{
+        position: relative;
+    }
+
+    .background{
+        min-height: 238px !important;
+    }
+
+    .background .filler{
+        top: 0 !important;
+        max-height: 238px;
+    }
+
+    .pebble-background.filler{
+        min-height: 70px;
+    }
+
+    .peble-paper h2{
+        position: absolute;
+        top: -70px;
+    }
+
+    main .menu>ul{
+        /*display: flex;*/
+    }
+
     .peble-paper{
         min-height: 1330px !important;
     }
@@ -598,6 +645,29 @@ main .examples .filler .row figcaption{
 
     .footer-top{
         min-height: 375px;
+    }
+}
+
+@media (min-width: 992px){
+    main .menu>ul:first-of-type{
+        width: 38% !important;
+        margin-right: 5px;
+        padding-left: 28px;
+    }
+
+    main .menu>ul:last-of-type{
+        width: 58%;
+        padding-left: 36px;
+    }
+
+    main .peble-paper .col-md-6:first-of-type{
+        width: 47%;
+    }
+
+    main .peble-paper .col-md-6:last-of-type {
+        width: 53%;
+        padding-right: 21px;
+        padding-left: 0;
     }
 }
 
@@ -622,5 +692,21 @@ main .examples .filler .row figcaption{
 @media (max-width: 1200px) {
     .examples figure, .examples .hover, .examples .filler .row div:hover .hover-text{
         max-width: 100%;
+    }
+
+    .menu ul{
+        padding: 0!important;
+    }
+}
+
+
+@media (max-width: 767px){
+    .peble-paper{
+        height: 500px !important;
+        min-height: 500px !important;
+    }
+
+    .peble-paper .col-sm-6:first-of-type{
+        width: 100% !important;
     }
 }
