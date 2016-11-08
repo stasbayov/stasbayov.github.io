@@ -48,6 +48,7 @@ html, body{
     width: 100%;
     /*width: 1920px;*/
     min-height: 800px;
+    /*min-width: 1024px;*/
 }
 
 .wrapper {
@@ -225,7 +226,7 @@ main .background .filler img{
     min-height: 238px;
 }
 
-main .peble-paper{
+.peble-paper{
     position: relative;
     min-height: 578px;
 }
@@ -574,6 +575,42 @@ main .examples .filler .row figcaption{
 
 .footer-bottom a{
     color: #959595;
+}
+
+@media (max-width: 767px){
+    .peble-paper .col-sm-6:first-of-type{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 991px){
+    .peble-paper{
+        min-height: 1330px !important;
+    }
+
+    .peble-paper img{
+        width: 100%;
+    }
+
+    .slider{
+        transform: none !important;
+    }
+
+    .footer-top{
+        min-height: 375px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1014px){
+    .company{
+        padding-left: 5% !important;
+    }
+}
+
+@media (max-width: 1041px){
+     .peble-paper{
+        min-height: 600px ;
+    }
 }
 
 @media (max-width: 1058px){
