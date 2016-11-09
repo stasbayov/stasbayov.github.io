@@ -592,13 +592,13 @@ main .examples .filler .row figcaption{
 }
 
 
-@media (max-width: 784px){
+@media (max-width: 799px){
     main .menu>ul:last-child li:nth-child(2){
         line-height: 17px;
     }
 }
 
-@media (max-width: 900px){
+@media (max-width: 915px){
     main .menu>ul:last-child li:first-child{
         line-height: 17px;
     }
@@ -610,13 +610,29 @@ main .examples .filler .row figcaption{
         line-height: 40px;
     }
 
-    main .menu>ul li{
+    main .menu>ul>li{
         width: 20%;
         text-align: center;
     }
 
+    main .menu .submenu li{
+        text-align: left;
+    }
+
     main .menu>ul>li:hover{
         line-height: 34px;
+    }
+
+    main .menu>ul>li:hover .submenu{
+        opacity: 0.6;
+    }
+
+    main .menu>ul>li .submenu:hover{
+        opacity: 1;
+    }
+
+    .menu ul li .submenu{
+        top: 33px !important;
     }
 
     .filler{
@@ -708,13 +724,44 @@ main .examples .filler .row figcaption{
         max-width: 100%;
     }
 
-    .menu ul{
+    .main-menu .row{
+        margin-left: 0!important;
+    }
+
+    .menu>ul{
         padding: 0!important;
+    }
+
+    .menu>ul:first-of-type li, .menu>ul:last-of-type li{
+        margin-right: 0 !important;
     }
 }
 
 
 @media (max-width: 767px){
+    .contact , .collection{
+        width: 100% !important;
+    }
+
+    .contact{
+        height: 100%!important;
+    }
+
+    .contact div{
+        position: relative !important;
+        text-align: center !important;
+    }
+
+    .collection{
+        height: 50px!important;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .collection a{
+        position: relative !important;
+    }
+
     .peble-paper{
         height: 500px !important;
         min-height: 500px !important;
