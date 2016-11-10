@@ -41,6 +41,13 @@ li{
     list-style: none;
 }
 
+hr{
+    height: 3px;
+    border-top: 1px solid #e2ddd8;
+    border-bottom: 1px solid #e2ddd8;
+    margin: 0;
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -237,7 +244,7 @@ main .background .filler img{
 
 .peble-paper{
     position: relative;
-    min-height: 578px;
+    min-height: 551px;
 }
 
 main .peble-paper .col-sm-6{
@@ -293,7 +300,26 @@ main .peble-paper .slider{
 
 main .peble-paper .slider img{
 border: 8px solid #ffffff !important;
+}
 
+.navbar-responsive{
+    min-height: 280px;
+}
+
+.navbar-toggle{
+    background-color: #1d275a;
+}
+
+.navbar-toggle:active{
+    background: #c7a900;
+}
+
+.navbar-collapse{
+    padding: 0;
+}
+
+.icon-bar{
+    background-color: white;
 }
 
 #carousel a {
@@ -367,7 +393,7 @@ main .examples{
     font-size: 18px;
     font-family: "futura-lt", Sans-Serif;
     text-align: center;
-    min-height: 362px;
+    min-height: 383px;
 }
 
 main .examples .filler{
@@ -425,13 +451,23 @@ main .examples .filler .row div:hover .hover-text{
     height: 253px;
     position: absolute;
     bottom: 0;
-    padding: 20% 10% 15% 15%;
+    padding: 20% 5% 15% 2%;
     text-align: justify;
 }
 
-main .examples .filler .row div:hover .hover-text p{
+main .examples .filler .row>div:hover .hover-text .skobka{
+    display: inline-block;
+}
+
+main .examples .filler .row>div:hover .hover-text .skobka img{
+    vertical-align: bottom;
+}
+
+main .examples .filler .row>div:hover .hover-text p{
     font-size: 13px;
     font-family: "lucidaGrande", Sans-Serif;
+    max-width: 80%;
+    display: inline-block;
 }
 
 /*main .examples .filler .row div:hover .hover-text p:first-child{*/
@@ -469,6 +505,7 @@ main .examples .filler .row div:hover .button{
 
 main .examples .filler .row figcaption{
     margin-bottom: 14px;
+    padding-top: 16px;
 }
 
 .footer-top{
@@ -592,19 +629,25 @@ main .examples .filler .row figcaption{
 }
 
 
-@media (max-width: 799px){
+
+
+@media (max-width: 816px){
     main .menu>ul:last-child li:nth-child(2){
         line-height: 17px;
     }
 }
 
-@media (max-width: 915px){
+@media (max-width: 932px){
     main .menu>ul:last-child li:first-child{
         line-height: 17px;
     }
 }
 
 @media (max-width: 991px){
+    hr{
+        display: none;
+    }
+
     main .menu>ul{
         height: 33px;
         line-height: 40px;
@@ -739,6 +782,31 @@ main .examples .filler .row figcaption{
 
 
 @media (max-width: 767px){
+    .menu{
+        display: flex;
+    }
+
+    .menu>ul{
+        display: flex;
+        flex-direction: column!important;
+    }
+
+    .menu>ul>li{
+        width: 100%!important;
+        line-height: 40px!important;
+        text-align: left!important;
+        border-top: 0!important;
+    }
+
+    main .menu ul li .submenu{
+        left: 100px!important;
+        top: 48px!important;
+    }
+
+    .navbar-collapse.in{
+        overflow: inherit;
+    }
+
     .contact , .collection{
         width: 100% !important;
     }
@@ -777,5 +845,68 @@ main .examples .filler .row figcaption{
 
     main .examples .filler .row figure{
         margin: 0 auto;
+    }
+
+    .footer-top .address, .footer-top .company, .footer-top .newsletter, .footer-bottom .copyrights, .footer-bottom .privacy{
+        text-align: center;
+        padding: 0!important;
+    }
+
+    .footer-top .newsletter{
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 375px){
+    main .menu>ul:last-child li:first-child, main .menu>ul:last-child li:nth-child(2){
+        line-height: 2!important;
+    }
+}
+
+@media(max-width: 328px){
+    main .menu>ul:last-child li:first-child, main .menu>ul:last-child li:nth-child(2){
+        line-height: 1.5!important;
+    }
+}
+
+@media (max-width: 526px){
+    .peble-paper{
+        min-height: 530px!important;
+    }
+}
+
+@media (max-width: 465px){
+    .peble-paper{
+        min-height: 570px!important;
+    }
+}
+
+@media (max-width: 433px){
+    .peble-paper{
+        min-height: 600px!important;
+    }
+}
+
+@media (max-width: 418px){
+    .peble-paper{
+        min-height: 630px!important;
+    }
+}
+
+@media (max-width: 387px){
+    .peble-paper{
+        min-height: 660px!important;
+    }
+}
+
+@media (max-width: 369px){
+    .peble-paper{
+        min-height: 690px!important;
+    }
+}
+
+@media (max-width: 330px){
+    .peble-paper{
+        min-height: 720px!important;
     }
 }
