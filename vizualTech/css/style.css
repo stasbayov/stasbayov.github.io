@@ -515,7 +515,18 @@ main .examples .filler .row figcaption{
 
 .footer-top .social{
     text-align: center;
-    word-spacing: 13px;
+    display: flex;
+}
+
+.footer-top .social hr{
+    width: 100%;
+    margin: auto auto;
+}
+
+.footer-top .social .icons{
+    display: inline-flex;
+    padding: 0 15px 0 15px;
+    letter-spacing: 13px;
 }
 
 .footer-top .social a{
@@ -628,10 +639,7 @@ main .examples .filler .row figcaption{
     color: #959595;
 }
 
-
-
-
-@media (max-width: 816px){
+@media (max-width: 801px){
     main .menu>ul:last-child li:nth-child(2){
         line-height: 17px;
     }
@@ -644,7 +652,7 @@ main .examples .filler .row figcaption{
 }
 
 @media (max-width: 991px){
-    hr{
+    .main-menu hr{
         display: none;
     }
 
@@ -844,7 +852,7 @@ main .examples .filler .row figcaption{
     }
 
     main .examples .filler .row figure{
-        margin: 0 auto;
+        margin: 10px auto;
     }
 
     .footer-top .address, .footer-top .company, .footer-top .newsletter, .footer-bottom .copyrights, .footer-bottom .privacy{
