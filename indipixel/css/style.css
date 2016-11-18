@@ -65,7 +65,7 @@ header{
     color: #f9fbe7
 }
 
-.contact a:hover{
+.contact a:hover, .contact a:active, .contact a:focus{
     text-decoration: none;
 }
 
