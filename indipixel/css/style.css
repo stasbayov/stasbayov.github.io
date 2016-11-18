@@ -65,6 +65,10 @@ header{
     color: #f9fbe7
 }
 
+.contact a:hover{
+    text-decoration: none;
+}
+
 .gibson{
     transform: translateY(37px);
 }
@@ -191,7 +195,7 @@ footer{
         margin-right: 0;
     }
     .mail{
-        padding-left: 15px;
+        padding-left: 30px;
     }
 }
 
