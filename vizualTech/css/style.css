@@ -455,12 +455,12 @@ main .examples .filler .row div:hover .hover-text{
     text-align: justify;
 }
 
-main .examples .filler .row>div:hover .hover-text .skobka{
-    display: inline-block;
+main .examples .filler .row>div:hover .hover-text .skobka-text{
+    display: flex;
 }
 
-main .examples .filler .row>div:hover .hover-text .skobka img{
-    vertical-align: bottom;
+main .examples .filler .row>div:hover .hover-text .skobka{
+    display: inline-block;
 }
 
 main .examples .filler .row>div:hover .hover-text p{
@@ -468,7 +468,16 @@ main .examples .filler .row>div:hover .hover-text p{
     font-family: "lucidaGrande", Sans-Serif;
     max-width: 80%;
     display: inline-block;
+    margin-bottom: 0;
 }
+
+main .examples .filler .row>div:hover .hover-text .skobka img{
+    vertical-align: bottom;
+    height: 100%;
+    margin-right: 25px;
+}
+
+
 
 /*main .examples .filler .row div:hover .hover-text p:first-child{*/
     /*display: inline-block;*/
@@ -637,6 +646,12 @@ main .examples .filler .row figcaption{
 
 .footer-bottom a{
     color: #959595;
+}
+
+@media (min-width: 768px) and (max-width: 785px){
+    .examples .button button{
+        transform: translateY(28px);
+    }
 }
 
 @media (max-width: 801px){
