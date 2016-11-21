@@ -474,15 +474,15 @@ footer li:first-child{
 	}
 }
 
-@media (max-width: 891px){
+@media (max-width: 916px){
 	.about{
 		height: 440px;
 	}
 }
 
-@media (max-width: 807px){
+@media (max-width: 814px){
 	.about{
-		height: 470px;
+		height: 450px;
 	}
 
 	.aboutus{
@@ -495,9 +495,9 @@ footer li:first-child{
 	}
 }
 
-@media (max-width: 795px){
+@media (max-width: 802px){
 	.about{
-		height: 490px;
+		height: 480px;
 	}
 }
 
