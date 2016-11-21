@@ -1,0 +1,633 @@
+@font-face {font-family: "ElektraLightPro";
+    src: url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.eot");
+    src: url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.svg#Elektra Light Pro") format("svg");
+}
+
+@font-face{ 
+      font-family: 'WebSymbolsLigaRegular';
+          src: url('../fonts/websymbolsligaregular.eot');
+          src: url('../fonts/websymbolsligaregular.eot?#iefix') format('embedded-opentype'),
+               url('../fonts/websymbolsligaregular.woff') format('woff'),
+               url('../fonts/websymbolsligaregular.ttf') format('truetype'),
+               url('../fonts/websymbolsligaregular.svg#WebSymbolsRegular') format('svg');
+}
+
+a{
+	color: #0000ff;
+}
+
+html, body{
+	font-family: "ElektraLightPro", Sans-Serif;
+	margin: 0;
+	color: #666666;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 0 0;
+	background-color: white;
+}
+
+header{
+	min-height: 150px;
+	position: relative;
+}
+
+.partners{
+	text-align: center;
+	font-size: 14px;
+}
+
+.partners a{
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid #f7e300;
+}
+
+.logo{
+	display: inline-block;
+	position: absolute;
+	width: 73px;
+	margin-top: -40px;
+	margin-left: -20px;
+}
+
+.logo figure{
+	width: 100%;
+}
+
+.logo figcaption{
+	font-size: 11px;
+	width: 100%;
+	text-align: center;
+}
+
+.company{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	margin-top: 23px;
+	margin-left: 100px;
+	display: inline-block;
+}
+
+.company>li{
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.company a{
+	text-decoration: none;
+	color: black;
+}
+
+.company li:nth-child(3):hover ul.submenu a{
+	background: none;
+}
+
+.company >li:hover a{
+	background-color: yellow;
+}
+
+.company li{
+	position: relative;
+	padding: 12px;
+}
+
+ul.submenu{
+	display: none;
+}
+
+.company li:hover{
+	background: #f4f6f4;
+}
+
+.company li:nth-child(3):hover ul.submenu{
+	display: block;
+	position: absolute;
+	background-color: #f4f6f4;
+	z-index: 10;
+	top: -10px;
+	left: 0;
+	padding: 5px 0 0 20px;
+	font-size: 12px;
+	width: 170px;
+}
+
+
+.company li li{
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+.company li li:hover{
+	background-color: #f7e300;
+}
+
+form{
+	display: inline-block;
+	margin-left: 35px;
+	border-top: none;
+}
+
+.search{
+	font-family: 'WebSymbolsLigaRegular', Sans-Serif;
+	color: #f7e300;
+}
+
+input[type=search]{
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+.phone{
+	font-size: 18px;
+}
+
+hr{
+	margin-top: 20px;
+}
+
+.main{
+	position: absolute;
+	margin-top: 5px;
+	margin-left: -20px;
+	font-size: 13px; 
+}
+
+.main a{
+	margin-right: 20px;
+}
+
+.main li{
+	display: inline-block;
+}
+
+.main li:last-child a{
+	color: #cccccc;
+	text-decoration: none;
+}
+
+.main ul{
+	display: none;
+}
+
+.main li:nth-child(2):hover ul{
+	display: inline-block;
+}
+
+.about{
+	height: 400px;
+	position: relative;
+}
+
+.about figure{
+	margin: 0;
+	padding: 0;
+	width: 50%;
+	overflow: hidden;
+	position: absolute;
+}
+
+.about img{
+	object-fit: cover;
+	height: 400px;
+}
+
+.about section{
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	padding: 0 50px 0 30px;
+	box-sizing: border-box;
+	font-size: 16px; 
+}
+
+.method{
+	border: 4px solid #f7e300;
+	padding: 10px 10px 0 30px;
+	margin-right: 20px;
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.method::before{
+	content: '';
+   border: 10px solid transparent;
+   border-left: 10px solid #f7e300;
+   border-top: 10px solid #f7e300;
+   position: absolute;
+   left: -4px;
+   bottom: -20px;
+}
+
+.method h1{
+	margin: 0;
+	font-size: 20px;
+}
+
+.method p{
+	margin-top: 0;
+}
+
+section p{
+	font-size: 14px;
+}
+
+.services{
+	position: relative;
+	height: 160px;
+	background-color: #f4f6f4;
+}
+
+.services li{
+	margin-bottom: 5px;
+	color: #0000ff;
+}
+
+.marketing{
+	width: 50%;
+	position: absolute;
+}
+
+.marketing p{
+	border: 4px solid #f7e300;
+	padding: 10px 10px 10px 15px;
+	font-size: 18px;
+	margin: 50px 0 60px 30px;
+	position: relative;
+}
+
+.marketing p::before{
+   content: '';
+   border: 10px solid transparent;
+   border-left: 10px solid #f7e300;
+   border-top: 10px solid #f7e300;
+   position: absolute;
+   right: -20px;
+   top: -4px;
+}
+
+.list{
+	width: 50%;
+	position: absolute;
+	left: 50%;
+}
+
+ul{
+	list-style: none;
+	margin-top: 50px;
+}
+
+.petrov{
+	position: relative;
+	height: 350px;	
+}
+
+.man{
+	position: absolute;
+	width: 33%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.man img{
+	margin-left: -130px;
+}
+
+.man figcaption{
+	position: inherit;
+	bottom: 15px;
+	left: 30px;
+	color: #ffffff;
+}
+
+.man p:first-line{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.yellow{
+	position: absolute;
+	width: 34%;
+	left: 33%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.man img, .yellow img{
+	object-fit: cover;
+	height: 350px;
+}
+
+.yellow figcaption{
+	position: inherit;
+	top: 100px;
+	left: 80px;
+	right: 80px;
+	font-size: 14px;	
+}
+
+.yellow h1{
+	font-size: 18px;
+}
+
+.yellow a{
+	text-decoration: none;
+	color: #666666;
+}
+
+.petrov form{
+	position: absolute;
+	width: 33%;
+	right: 0;
+	box-sizing: border-box;
+}
+
+.pickup{
+	text-align: center;
+	padding-top: 80px;
+}
+
+.pickup input{
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	width: 180px;
+	height: 14px;
+	padding: 7px 0;
+	margin-bottom: 10px;
+}
+
+.pickup p{
+	margin-left: -25px;
+}
+
+.pickup a{
+	margin-left: -67px;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.pickup input[type="submit"]{
+	height: 50px;
+	background-color: #2867db;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+footer{
+	min-height: 150px;
+	background-color: #f4f6f4;
+	padding: 50px 40px 80px 30px;
+	position: relative;
+}
+
+footer li{
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+footer li:first-child{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.info{
+	position: absolute;
+	width: 20%;
+}
+
+.attendance{
+	position: absolute;
+	left: 20%;
+	width: 20%;
+}
+
+.blog{
+	position: absolute;
+	width: 20%;
+	left: 40%;
+}
+
+.aboutus{
+	position: absolute;
+	width: 20%;
+	left: 60%;
+}
+
+.groups{
+	position: absolute;
+	width: 20%;
+	left: 80%;
+	font-size: 15px;
+
+}
+
+.groups p{
+	font-family: 'WebSymbolsLigaRegular';
+	font-size: 26px;
+		
+}
+
+.groups p a{
+	color:  #666666;
+}
+
+.groups li:last-child{
+	margin-top: 80px;
+}
+
+ footer ul{
+ 	padding: 0;
+	margin: 0;
+ }
+
+
+@media (max-width: 952px){
+	header{
+		min-height: 200px;
+	}
+	form.search, span.phone{
+		display: block;
+		text-align: left;
+		margin-bottom: 10px;
+		margin-left: 35px;
+	}
+
+	span.phone{
+
+	}
+}
+
+@media (max-width: 804px){
+	.aboutus{
+		width: 17%;
+	}
+
+	.groups{
+		width: 23%;
+		left: 77%;
+	}
+}
+
+@media (max-width: 786px){
+	footer{
+		padding-left: 20px;
+	}
+}
+
+@media (max-width: 767px){
+	header{
+		min-height: 250px;
+	}
+
+	header .logo{
+		position: relative;
+		display: block;
+	}
+
+	header .logo figcaption{
+		text-align: left;
+	}
+
+	ul.company{
+		display: block;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	.about{
+		height: 100%;
+	}
+
+	.about figure{
+		display: none;
+	}
+
+	.about section{
+		position: relative;
+		width: 100%;
+		left: 0;
+		padding-right: 0;
+	}
+
+	.petrov{
+		height: 100%;
+	}
+
+	.petrov figure{
+		display: none;
+	}
+
+	.petrov form{
+		display: block;
+		position: relative;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.petrov form input {
+		display: block;
+		margin: 0 auto;
+	}
+
+	footer .info, footer .attendance, footer .blog, footer .aboutus, footer .groups{
+		position: relative;
+		left: 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	footer .info, footer .attendance, footer .blog {
+		width: 32%;
+	}
+
+	footer .aboutus, footer .groups{
+		width: 49%;
+	}
+
+	footer .groups li:last-child{
+		margin-top: 0;
+	}
+
+}
+
+@media (max-width: 580px){
+	header{
+		min-height: 300px;
+	}
+
+	.logo{
+		margin: 0;
+	}
+}
+
+@media (max-width: 545px){
+	.services .marketing{
+		display: none;
+	}
+
+	.services .list{
+		width: 100%;
+		left: 0;
+		text-align: center;
+	}
+
+	.services .list ul{
+		padding: 0;
+	}
+}
+
+@media (max-width: 441px){
+	header{
+		min-height: 400px;
+	}
+
+	.company li{
+		display: block;
+		margin: 0;
+	}
+
+	.company li:nth-child(3):hover ul.submenu{
+		left: 28%;
+	}
+}
+
+@media (max-width: 378px){
+	footer{
+		padding: 50px 20px 20px 10px;
+	}
+}
+
+@media (max-width: 378px){
+	footer .aboutus{
+		width: 44%;
+	}
+
+	footer .groups{
+		width: 54%;
+	}
+}
+
+@media (max-width: 354px){
+	header{
+		min-height: 420px;
+	}
+}
