@@ -458,7 +458,7 @@ footer li:first-child{
  }
 
 
-@media (max-width: 952px){
+@media (max-width: 955px){
 	header{
 		min-height: 200px;
 	}
@@ -469,12 +469,22 @@ footer li:first-child{
 		margin-left: 35px;
 	}
 
-	span.phone{
-
+	.about{
+		height: 420px;
 	}
 }
 
-@media (max-width: 804px){
+@media (max-width: 891px){
+	.about{
+		height: 440px;
+	}
+}
+
+@media (max-width: 807px){
+	.about{
+		height: 470px;
+	}
+
 	.aboutus{
 		width: 17%;
 	}
@@ -482,6 +492,12 @@ footer li:first-child{
 	.groups{
 		width: 23%;
 		left: 77%;
+	}
+}
+
+@media (max-width: 795px){
+	.about{
+		height: 490px;
 	}
 }
 
