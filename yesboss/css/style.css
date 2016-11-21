@@ -1,19 +1,14 @@
 @font-face {font-family: "ElektraLightPro";
-    src: url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.eot");
-    src: url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.eot?#iefix") format("embedded-opentype"),
-    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.woff2") format("woff2"),
-    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.woff") format("woff"),
-    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.ttf") format("truetype"),
-    url("http://db.onlinewebfonts.com/t/f50b2e5307a66e2c1ca6a39f91ce268d.svg#Elektra Light Pro") format("svg");
+    src: url('../fonts/electra.otf');
 }
 
 @font-face{ 
       font-family: 'WebSymbolsLigaRegular';
           src: url('../fonts/websymbolsligaregular.eot');
-          src: url('../fonts/websymbolsligaregular.eot?#iefix') format('embedded-opentype'),
+          src: url('../fonts/websymbolsligaregular.eot') format('embedded-opentype'),
                url('../fonts/websymbolsligaregular.woff') format('woff'),
                url('../fonts/websymbolsligaregular.ttf') format('truetype'),
-               url('../fonts/websymbolsligaregular.svg#WebSymbolsRegular') format('svg');
+               url('../fonts/websymbolsligaregular.svg') format('svg');
 }
 
 a{
@@ -613,7 +608,7 @@ footer li:first-child{
 
 @media (max-width: 441px){
 	header{
-		min-height: 400px;
+		min-height: 410px;
 	}
 
 	.company li{
@@ -628,7 +623,7 @@ footer li:first-child{
 
 @media (max-width: 378px){
 	footer{
-		padding: 50px 20px 20px 10px;
+		padding: 50px 16px 20px 10px;
 	}
 }
 
@@ -642,8 +637,8 @@ footer li:first-child{
 	}
 }
 
-@media (max-width: 354px){
+@media (max-width: 360px){
 	header{
-		min-height: 420px;
+		min-height: 430px;
 	}
 }
