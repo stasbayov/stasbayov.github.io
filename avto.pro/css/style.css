@@ -10,6 +10,18 @@ input{
     border: none;
 }
 
+.blue{
+    min-height: 20px;
+    line-height: 20px;
+    top: -13px;
+    left: 34px;
+    position: absolute;
+    color: white;
+    background: #30ace8;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
 .green, a.green{
     color: #3f8e3f;
 }
@@ -28,6 +40,10 @@ header{
 
 header a, header label{
     color: black;
+}
+
+header a:hover{
+    color: #f9a32a;
 }
 
 header .navbar-toggle{
@@ -58,7 +74,7 @@ header .navbar-toggle span{
 
 .mainmenu .form input[type="search"]{
     width: 90%;
-    background: orange;
+    background: #f9a32a;
     padding: 5px;
 }
 
@@ -72,7 +88,7 @@ header .navbar-toggle span{
 
 .mainmenu .catalog li:before{
     content: "\2192";
-    color: orange;
+    color: #f9a32a;
     margin-right: 8px;
 }
 
@@ -150,7 +166,7 @@ main .description-container{
 
 main .description{
     background: #eeeeee;
-    padding: 10px;
+    padding: 11px;
     border: 1px solid transparent;
     border-radius: 10px;
 }
@@ -176,8 +192,11 @@ main .description .dollars{
 }
 
 main .description .shopping{
-    color: white;
     padding: 0;
+}
+
+main .description .shopping a{
+    color: white;
 }
 
 main .description .shopping i{
@@ -198,13 +217,18 @@ main .row.fifth .contacts{
 
 main .contacts .confidence{
     border-radius: 5px;
-    padding: 4px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+main .contacts .confidence p{
+    margin: 5px;
 }
 
 main .contacts .confidence .level{
     border-radius: 5px;
+    padding: 2px;
+    line-height: 30px;
 }
 
 main .contacts .confidence .level a{
@@ -242,7 +266,7 @@ main .contacts .saler{
     border: 1px solid transparent;
     border-radius: 10px;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 4px;
     cursor: pointer;
 }
 
@@ -271,6 +295,10 @@ main .from label, main .where label, main .price label:first-child{
         float: right;
     }
 
+    main .header{
+        text-align: center;
+    }
+
     main .contacts .confidence{
         width: 65%;
         float: right;
@@ -288,6 +316,11 @@ main .from label, main .where label, main .price label:first-child{
 }
 
 @media (max-width: 991px){
+    ::-webkit-input-placeholder {color:white;}
+    ::-moz-placeholder          {color:white;}/* Firefox 19+ */
+    :-moz-placeholder           {color:white;}/* Firefox 18- */
+    :-ms-input-placeholder      {color:white;}
+
     .logo{
         text-align: center;
         height: 118px;
