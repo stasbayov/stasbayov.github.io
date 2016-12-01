@@ -1,0 +1,339 @@
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+input{
+    border: none;
+}
+
+.green, a.green{
+    color: #3f8e3f;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+}
+header{
+    background: url("../images/background.jpg") repeat-x;
+    min-height: 118px;
+}
+
+header a, header label{
+    color: black;
+}
+
+header .navbar-toggle{
+    background: #eeeeee;
+}
+
+header .navbar-toggle span{
+    background: black;
+}
+
+.sale{
+    line-height: 30px;
+}
+
+.sale ul li{
+    display: inline-block;
+}
+
+.mainmenu .form, .mainmenu .catalog{
+    display: inline-block;
+}
+
+.mainmenu .form{
+    vertical-align: top;
+    margin-top: 4px;
+    max-width: 55%;
+}
+
+.mainmenu .form input[type="search"]{
+    width: 90%;
+    background: orange;
+    padding: 5px;
+}
+
+.mainmenu .form input[type="submit"]{
+    padding: 5px;
+}
+
+.mainmenu .catalog{
+    max-width: 44%;
+}
+
+.mainmenu .catalog li:before{
+    content: "\2192";
+    color: orange;
+    margin-right: 8px;
+}
+
+main{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+main .header{
+    min-height: 100px;
+    background: #eeeeee;
+    padding: 20px 0;
+}
+
+main select{
+    background: #f7f7f7;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+main input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"] + label i{
+    cursor: pointer;
+    background: white;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+input[type="radio"]:checked + label i{
+    box-shadow: inset 2px 1px 2px 1px black;
+}
+
+main .container{
+    width: inherit;
+}
+
+.main .row{
+    border: 1px solid #eeeeee;
+}
+
+.row.first, .row.second, .row.third, .row.fourth, .row.fifth{
+    padding: 10px 20px;
+}
+
+main .row:last-child{
+    border-top: none;
+}
+
+main .row.fourth{
+    border-bottom: none;
+}
+
+main .container-fluid .row{
+    border: none;
+}
+
+main .detail{
+    line-height: 130px;
+    padding: 0;
+}
+
+main .row.fifth .detail{
+    height: 93px!important;
+    line-height: 93px!important;
+}
+
+main .description-container{
+    padding-right: 0;
+}
+
+main .description{
+    background: #eeeeee;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+main .description .col-sm-2:first-child{
+    padding-left: 0;
+}
+
+main .description .col-md-2:not(:first-child){
+    padding: 0;
+}
+
+main .description .col-md-3{
+    padding-right: 0;
+}
+
+main .description .col-sm-5{
+    line-height: 0.5;
+}
+
+main .description .dollars{
+    font-size: 20px;
+}
+
+main .description .shopping{
+    color: white;
+    padding: 0;
+}
+
+main .description .shopping i{
+    background: #5dbb5d;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+main .contacts{
+    margin-top: 24px;
+    padding-right: 0;
+}
+
+main .row.fifth .contacts{
+    margin-top: 24px;
+}
+
+main .contacts .confidence{
+    border-radius: 5px;
+    padding: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main .contacts .confidence .level{
+    border-radius: 5px;
+}
+
+main .contacts .confidence .level a{
+    color: white;
+}
+
+.contacts .green{
+    border: 1px solid #79b67a;
+}
+
+.contacts .green .level{
+    background: #79b67a;
+}
+
+.contacts .red{
+    border: 1px solid #e16c68;
+}
+
+.contacts .red .level{
+    background: #e16c68;
+}
+
+.contacts .orange{
+    border: 1px solid #f9a32a;
+}
+
+.contacts .orange .level{
+    background: #f9a32a;
+}
+
+main .contacts .saler{
+    background: #eeeeee;
+    min-height: 30px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+main .from label, main .where label, main .price label:first-child{
+    width: 100%;
+}
+
+@media (max-width: 350px){
+    .mainmenu .form input[type="search"]{
+        width: 88%;
+    }
+}
+
+@media (max-width: 563px){
+    .mainmenu .form, .mainmenu .catalog{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px){
+    .detail{
+        text-align: center;
+    }
+
+    .contacts{
+        float: right;
+    }
+
+    main .contacts .confidence{
+        width: 65%;
+        float: right;
+    }
+
+    main .contacts .saler{
+        width: 100%;
+    }
+}
+
+@media (max-width: 799px){
+    .description .col-sm-5{
+        line-height: 1.2!important;
+    }
+}
+
+@media (max-width: 991px){
+    .logo{
+        text-align: center;
+        height: 118px;
+    }
+
+    .menu{
+        text-align: center;
+    }
+
+    .menu .catalog{
+        text-align: left;
+    }
+
+    main .header .from select, main .header .where select{
+        width: 70%;
+    }
+
+    .description .col-sm-4.col-md-3{
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 992px){
+    header a, header label{
+        color: white;
+    }
+
+    .mainmenu .form input[type="search"]{
+        width: 90%;
+        background: white;
+    }
+
+    .header .container{
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu{
+        float: right;
+    }
+
+    .menu .navbar-header{
+        display: inline-block;
+        float: right;
+    }
+}
+

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>avto.pro</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="logo col-xs-12 col-md-3 col-lg-3">
+                    <img alt="Запчасти для иномарок, автозапчасти без посредников" src="images/logo.png" style="transform: translateY(22px);">
+                </div>
+                <div class="menu col-xs-12 col-md-9 col-lg-6">
+                    <div class="navbar">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" id="menutoggle" data-toggle="collapse" data-target="#responsive-menu">
+                                <span class="sr-only">Open menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="responsive-menu">
+                            <div class="mainmenu nav navbar-nav" id="menu">
+                                <div class="sale">
+                                    <ul>
+                                        <li><a href="#">Продавцов: 6496<sup>+31</sup></a></li>
+                                        <li><a href="#">Запчастей: 55.1 млн.</a></li>
+                                        <li><a href="#">Запчастей: 55.1 млн.</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="form">
+                                        <form>
+                                            <input type="search" id="search" placeholder="Поиск запчасти по коду"><input
+                                                type="submit" id="submit" value="&#128269">
+                                            <label for="search">Пример поиска: 40202-JG01A</label>
+                                        </form>
+                                    </div>
+                                    <div class="catalog">
+                                        <ul>
+                                            <li><a href="#">Каталог запчастей</a></li>
+                                            <li><a href="#">Оригинальные каталоги</a></li>
+                                            <li><a href="#">Форум</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tools hidden-xs hidden-sm hidden-md col-lg-3">
+                    <img src="images/tools.gif" style="z-index: 20; transform: translateY(9px); float: right">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="from col-xs-3">
+                        <label for="from-country">
+                            Доставка откуда
+                        </label>
+                        <select id="from-country">
+                            <option>
+                                Украина
+                            </option>
+                            <option>
+                                Россия
+                            </option>
+                            <option>
+                                Белорусь
+                            </option>
+                        </select>
+                        <select id="from-city">
+                            <option>
+                                Любой город
+                            </option>
+                            <option>
+                                Одесса
+                            </option>
+                            <option>
+                                Киев
+                            </option>
+                        </select>
+                    </div>
+                    <div class="where col-xs-3">
+                        <label for="where-country">
+                            Доставка куда
+                        </label>
+                        <select id="where-country">
+                            <option>
+                                Украина
+                            </option>
+                            <option>
+                                Россия
+                            </option>
+                            <option>
+                                Белорусь
+                            </option>
+                        </select>
+                        <select id="where-city">
+                            <option>
+                                Любой город
+                            </option>
+                            <option>
+                                Одесса
+                            </option>
+                            <option>
+                                Киев
+                            </option>
+                        </select>
+                    </div>
+                    <div class="price col-xs-4">
+                        <label for="money">
+                            Цена
+                        </label>
+                        <select id="money">
+                            <option>
+                                USD
+                            </option>
+                            <option>
+                                UAN
+                            </option>
+                            <option>
+                                RU
+                            </option>
+                        </select>
+                        <input type="checkbox" id="one"><label
+                         for="one">Розница</label>
+                        <input type="checkbox" id="many"> <label
+                        for="many">Опт</label>
+                    </div>
+                    <div class="view col-xs-2">
+                        <label>Вид</label>
+                        <div>
+                            <input name="view" type="radio" id="choose1">
+                            <label for="choose1"><i class="fa fa-align-justify" aria-hidden="true"></i></label>
+                            <input name="view" type="radio" id="choose2">
+                            <label for="choose2"><i class="fa fa-th-large" aria-hidden="true"></i></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="row first">
+                    <div class="detail col-xs-3 col-sm-1">
+                        <img src="images/disc.png">
+                    </div>
+                    <div class="description-container col-xs-9 col-sm-8">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Код <b>R1016</b>
+                                </div>
+                                <div class="col-sm-9">
+                                    Производитель <a href="#">VALEO</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p><b>Диск тормозной передн. HYUNDAI SANTA FE 16 4WD (пр-во VALEO PHC)</b></p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2"><b><span class="dollars">520.</span>81$</b></div>
+                                    <div class="col-xs-6 col-sm-1 shopping">
+                                         <i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-5 col-md-4">
+                                        <p>Отправка <b>через 14 дней</b></p>
+                                        <p>из г. <b>Санкт-Петербург</b></p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4 col-md-2">В наличии <b>5шт.</b></div>
+                                    <div class="col-xs-6 col-sm-4 col-md-3">Размещено <b>1 мая 2012</b></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <p><a href="#">+ еще 5 предложений</a></p>
+                    </div>
+                    <div class="contacts col-xs-9 col-sm-3">
+                        <div class="confidence green">Высокий уровень доверия<div class="level"><a href="#">85% ?</a></div></div>
+                        <button class="saler">Показать контакты продавца <b>AutoNom</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row second">
+                    <div class="detail col-xs-3 col-sm-1">
+                        <!--<img src="images/disc.png">-->
+                    </div>
+                    <div class="description-container col-xs-9 col-sm-8">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Код <b>R1016</b>
+                                </div>
+                                <div class="col-sm-9">
+                                    Производитель <a href="#">STARTLED</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p><b>Диск тормозной передн. HYUNDAI SANTA FE 16 4WD (пр-во VALEO PHC)</b></p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2"><b><span class="dollars">520.</span>81$</b></div>
+                                    <div class="col-xs-6 col-sm-1 shopping">
+                                        <i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-5 col-md-4">
+                                        <p>Отправка <b>через 14 дней</b></p>
+                                        <p>из г. <b>Санкт-Петербург</b></p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4 col-md-2">В наличии <b>5шт.</b></div>
+                                    <div class="col-xs-6 col-sm-4 col-md-3">Размещено <b>1 мая 2012</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts col-xs-9 col-sm-3">
+                        <div class="confidence red">Низкий уровень доверия <div class="level"><a href="#">5% ?</a></div></div>
+                        <button class="saler">Показать контакты продавца <b>AutoNom</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row third">
+                    <div class="detail col-xs-3 col-sm-1">
+                        <!--<img src="images/disc.png">-->
+                    </div>
+                    <div class="description-container col-xs-9 col-sm-8">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Код <b>R1016</b>
+                                </div>
+                                <div class="col-sm-9">
+                                    Производитель <a href="#">VALEO</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p><b>Диск тормозной передн. HYUNDAI SANTA FE 16 4WD (пр-во VALEO PHC)</b></p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2"><b><span class="dollars">520.</span>81$</b></div>
+                                    <div class="col-xs-6 col-sm-1 shopping">
+                                        <i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-5 col-md-4">
+                                        <p>Отправка <b>через 14 дней</b></p>
+                                        <p>из г. <b>Санкт-Петербург</b></p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4 col-md-2">В наличии <b>5шт.</b></div>
+                                    <div class="col-xs-6 col-sm-4 col-md-3">Размещено <b>1 мая 2012</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts col-xs-9 col-sm-3">
+                        <div class="confidence orange">Средий уровень доверия<div class="level"><a href="#">45% ?</a></div></div>
+                        <button class="saler">Показать контакты продавца<b>AutoNom</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row fourth">
+                    <div class="detail col-xs-3 col-sm-1">
+                        <!--<img src="images/disc.png">-->
+                    </div>
+                    <div class="description-container col-xs-9 col-sm-8">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    Код <b>R1016</b>
+                                </div>
+                                <div class="col-sm-9">
+                                    Производитель <a href="#">VALEO</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p><b>Диск тормозной передн. HYUNDAI SANTA FE 16 4WD (пр-во VALEO PHC)</b></p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2"><b><span class="dollars">520.</span>81$</b></div>
+                                    <div class="col-xs-6 col-sm-1 shopping">
+                                        <i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-5 col-md-4">
+                                        <p>Отправка <b><a href="#" class="green">завтра</a> </b></p>
+                                        <p>из г. <b>Санкт-Петербург</b></p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4 col-md-2">В наличии <b>5шт.</b></div>
+                                    <div class="col-xs-6 col-sm-4 col-md-3">Размещено <b>1 мая 2012</b></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--<p><a href="#">+ еще 5 предложений</a></p>-->
+                    </div>
+                    <div class="contacts col-xs-9 col-sm-3">
+                        <div class="confidence orange">Средний уровень доверия<div class="level"><a href="#">45% ?</a></div></div>
+                        <button class="saler">Показать контакты продавца <b>AutoNom</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row fifth">
+                    <div class="detail col-xs-3 col-sm-1">
+                        <img src="images/disc.png">
+                    </div>
+                    <div class="description-container col-xs-9 col-sm-8">
+                        <!--<div class="container-fluid">-->
+                            <!--<div class="row">-->
+                                <!--<div class="col-sm-3">-->
+                                    <!--Код <b>R1016</b>-->
+                                <!--</div>-->
+                                <!--<div class="col-sm-9">-->
+                                    <!--Производитель <a href="#">VALEO</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="description">
+                            <p><b>Диск тормозной передн. HYUNDAI SANTA FE 16 4WD (пр-во VALEO PHC)</b></p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-2"><b><span class="dollars">520.</span>81$</b></div>
+                                    <div class="col-xs-6 col-sm-1 shopping">
+                                        <i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-5 col-md-4">
+                                        <p>Отправка <b>через 14 дней</b></p>
+                                        <p>из г. <b>Санкт-Петербург</b></p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4 col-md-2">В наличии <b>5шт.</b></div>
+                                    <div class="col-xs-6 col-sm-4 col-md-3">Размещено <b class="green">22 авг 2012</b></div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <p><a href="#">- Свернуть</a></p>
+                    </div>
+                    <!--<div class="contacts col-xs-9 col-sm-3">-->
+                        <!--<div class="confidence green">Высокий уровень доверия<div class="level"><a href="#">85% ?</a></div></div>-->
+                        <!--<button class="saler">Показать контакты продавца <b>AutoNom</b></button>-->
+                    <!--</div>-->
+                 </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+</body>
