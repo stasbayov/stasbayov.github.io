@@ -20,6 +20,8 @@ input{
     background: #30ace8;
     border: 1px solid transparent;
     border-radius: 8px;
+    font-size: 14px;
+    padding: 0 3px;
 }
 
 .green, a.green{
