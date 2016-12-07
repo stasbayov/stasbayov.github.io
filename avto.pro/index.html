@@ -350,17 +350,26 @@
                                 </div>
                             </div>
                         </div>
-                        <p><a href="#">- Свернуть</a></p>
                     </div>
                     <!--<div class="contacts col-xs-9 col-sm-3">-->
                         <!--<div class="confidence green">Высокий уровень доверия<div class="level"><a href="#">85% ?</a></div></div>-->
                         <!--<button class="saler">Показать контакты продавца <b>AutoNom</b></button>-->
                     <!--</div>-->
-                 </div>
+                </div>
+                <p><a href="#" class="show">- Свернуть</a></p>
             </div>
         </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+       $('.show').click(function() {
+           $('.fifth').toggle();
+           $(this).text(function(i, text){
+               return text === "+ Развернуть" ? "- Свернуть" : "+ Развернуть";
+           })
+       })
+    </script>
+
 </body>
