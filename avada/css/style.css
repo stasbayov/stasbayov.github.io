@@ -1,41 +1,81 @@
 @font-face {
     font-family: 'OpenSans-Regular'; /* Имя шрифта */
-    src: url('../fonts/OpenSans-Regular.ttf'); /* Путь к файлу со шрифтом */
+	src: url('../fonts/OpenSans.eot');
+	src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans.woff') format('woff'),
+		url('../fonts/OpenSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
    }
 
 @font-face {
     font-family: 'OpenSans-Semibold'; /* Имя шрифта */
-    src: url('../fonts/OpenSans-Semibold.ttf'); /* Путь к файлу со шрифтом */
+    	src: url('../fonts/OpenSans-Semibold.eot');
+	src: url('../fonts/Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fonts/OpenSans-Semibold.woff') format('woff'),
+		url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
    }
 
 @font-face {
     font-family: 'OpenSans-Light'; /* Имя шрифта */
-    src: url('../fonts/OpenSans-Light.ttf'); /* Путь к файлу со шрифтом */
+    src: url('../fonts/OpenSans-Light.eot');
+	src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans-Light.woff') format('woff'),
+		url('../fonts/OpenSans-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
    }
 
 @font-face {
     font-family: 'opensans-italic'; /* Имя шрифта */
-    src: url('../fonts/opensans-italic.ttf'); /* Путь к файлу со шрифтом */
+    src: url('../fonts/OpenSans-Italic.eot');
+	src: url('../fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans-Italic.woff') format('woff'),
+		url('../fonts/OpenSans-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
    }
 
 @font-face {
     font-family: 'lobster'; /* Имя шрифта */
-    src: url('../fonts/lobster.ttf'); /* Путь к файлу со шрифтом */
+	src: url('../fonts/Lobster.eot');
+	src: url('../fonts/Lobster.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Lobster.woff') format('woff'),
+		url('../fonts/Lobster.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
    }
 
 @font-face {
     font-family: 'HelveticaLight'; /* Имя шрифта */
-    src: url('../fonts/HelveticaLight.ttf'); /* Путь к файлу со шрифтом */
+    	src: url('../fonts/HelveticaNeueCyr-Light.eot');
+	src: url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+		url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
    }
 
 @font-face {
     font-family: 'helvetica-neue'; /* Имя шрифта */
-    src: url('../fonts/helvetica-neue.otf'); /* Путь к файлу со шрифтом */
+    src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+	src: url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+		url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
    }
 
 @font-face {
     font-family: 'lato'; /* Имя шрифта */
-    src: url('../fonts/lato.ttf'); /* Путь к файлу со шрифтом */
+    src: url('../fonts/Lato-Regular.eot');
+	src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Lato-Regular.woff') format('woff'),
+		url('../fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
    }
 
 body{
