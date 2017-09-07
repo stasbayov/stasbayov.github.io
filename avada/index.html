@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>avada</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtVq5sL0bHy_2ZpatT1HmvybcELD-PD4g"></script>
+    <script type="text/javascript">
+function initMap() {
+    var centerLatLng = new google.maps.LatLng(46.4316195, 30.715109);
+
+    var mapOptions = {
+        center: centerLatLng,
+        zoom: 17              
+    };
+ 
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    var marker = new google.maps.Marker({
+        position: centerLatLng,              
+        map: map
+    });
+}
+ 
+google.maps.event.addDomListener(window, "load", initMap);
+    </script>
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="fonts/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload="initialize()" onunload="GUnload()">
+    <header>
+    	<button class="navbar-toggler navbar-toggler-right hidden-md-up" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 logo">
+                	<img src="images/logo.png">
+                </div>
+                <div class="col-lg-10 menu-phones">
+                    <div class="phones">
+                    	<img src="images/phone.png">
+                    	<a href="tel:+380487703430">+38 (048) <span>770 34 30</span></a> 
+                    	<a href="tel:+380675189009">+38 (067) <span>518 90 09</span></a>
+                    </div>
+                    <div class="menu">
+                        <nav class="navbar navbar-toggleable-sm">
+                            <div class="collapse navbar-collapse" id="menu">
+                                <ul id="main-menu">
+                                    <li><a href="#price">Кровельные материалы</a></li> 
+                                    <li><a href="#vyezd">Кровельные работы</a></li>
+                                    <li><a href="#gallery-2">Выполненные работы</a></li>
+                                    <li><a href="#footer">Контакты</a></li>
+                                </ul>        
+                            </div>
+                        </nav>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="top">
+            <div class="container">
+            	<div class="row">
+            		<div class="banner">
+            			<img src="images/fifty.png">
+            			<div class="top-text">
+            				<div>
+            					<h1><span>Кровельные</span> материалы и работы</h1>
+	            				<h2><span>Кровля «под ключ»</span><br> от 49 грн./м2</h2>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+        </section>
+        <section id="free">
+            <div class="container">
+            	<div class="row">
+            		<div class="col-md-3 offset-xl-1 ">
+            			<div class="application-block">
+            				<img src="images/arrow.png">
+	            			<div class="free-application">
+	            				<p style="font-size: 23px; font-family:'OpenSans-Light'; color: #463c31; margin-bottom: 10px;">Оставьте заявку сегодня</p>
+	            				<p style="font-size: 33px; font-family: 'lobster'; color: #444444; margin-bottom: 0;">и получите расчет</p>
+	            				<p style="font-size: 24px; font-family: 'lobster'; color: #444444; margin-bottom: 0;">стоимости Вашей кровли</p>
+	            				<p style="font-size: 59px; font-family: 'lobster'; color: #f83030; margin-bottom: 20px; line-height: 0.8;">бесплатно</p>
+	            				<p style="font-size: 18px; font-family:'OpenSans-Light'; color: #463c31; margin-bottom: 10px;">Мы гарантируем конфиденциальность!</p>
+	            			</div>
+            			</div>
+            		</div>
+            		<div class="col-md-7">
+            			<div class="house-block">
+            				<img src="images/house.png">
+            				<form>
+            					<h3>Заполните форму</h3>
+            					<p>чтобы получите бесплатный расчет стоимости Вашей кровли!</p>
+            						<div><input type="name" id="name-house" name="name" placeholder="Ваше имя">
+            						<label class="name-house" for="name-house">*</label></div>
+            						
+            						<div>	
+            						<input type="phone" id="phone-house" name="phone" placeholder="Ваш телефон">
+            						<label class="phone-house" for="phone-house">*
+            						</label>
+            						</div>
+            					
+            					<div>
+            						<input type="e-mail" id="e-mail-house" name="e-mail" placeholder="Ваш e-mail">
+            						<label class="e-mail-house" for="e-mail-house">
+            						*
+            						</label>
+            					</div>
+            					
+            					<input class="orange" type="submit" name="get" value="Получить расчет">
+            				</form>
+            			</div>
+            		</div>	
+            	</div>
+            </div>
+        </section>
+
+        <section id="slider">
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+			  	<div class="carousel-inner" role="listbox">
+			    	<div class="carousel-item active">
+			      		<img class="d-block" src="images/slide-1.jpg" alt="First slide">
+			      		<div class="carousel-caption d-none d-md-block block">
+			      			<h2>Предоставляем полный комплес услуг по кровле:</h2>
+			      			<div class="container">
+			      				<div class="row">
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/delivery.png">
+			      							<figcaption>
+			      								<h4>Подбор и доставка оборудования</h4>
+			      								<p>Напрямую с завода по цене ниже рыночных на 35%</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/montage.png">
+			      							<figcaption>
+			      								<h4>Профессиональный монтаж кровли</h4>
+			      								<p>Любой сложности с гарантией до 50 лет</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/service.png">
+			      							<figcaption>
+			      								<h4>Сервисное обслуживание и ремонт</h4>
+			      								<p>В случае необходимости в течении всего гарантийного срока!</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      				</div>
+			      			</div>
+						</div>
+			    	</div>
+			    	<div class="carousel-item">
+			      		<img class="d-block" src="images/slide-2.jpg" alt="Second slide">
+			      		<div class="carousel-caption d-none d-md-block block">
+							<h2>Предоставляем полный комплес услуг по кровле:</h2>
+			      			<div class="container">
+			      				<div class="row">
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/delivery.png">
+			      							<figcaption>
+			      								<h4>Подбор и доставка оборудования</h4>
+			      								<p>Напрямую с завода по цене ниже рыночных на 35%</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/montage.png">
+			      							<figcaption>
+			      								<h4>Профессиональный монтаж кровли</h4>
+			      								<p>Любой сложности с гарантией до 50 лет</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/service.png">
+			      							<figcaption>
+			      								<h4>Сервисное обслуживание и ремонт</h4>
+			      								<p>В случае необходимости в течении всего гарантийного срока!</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      				</div>
+			      			</div>
+						</div>
+			    	</div>
+			    	<div class="carousel-item">
+			      		<img class="d-block" src="images/slide-3.jpg" alt="Third slide">
+			      		<div class="carousel-caption d-none d-md-block block">
+							<h2>Предоставляем полный комплес услуг по кровле:</h2>
+			      			<div class="container">
+			      				<div class="row">
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/delivery.png">
+			      							<figcaption>
+			      								<h4>Подбор и доставка оборудования</h4>
+			      								<p>Напрямую с завода по цене ниже рыночных на 35%</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/montage.png">
+			      							<figcaption>
+			      								<h4>Профессиональный монтаж кровли</h4>
+			      								<p>Любой сложности с гарантией до 50 лет</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/service.png">
+			      							<figcaption>
+			      								<h4>Сервисное обслуживание и ремонт</h4>
+			      								<p>В случае необходимости в течении всего гарантийного срока!</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      				</div>
+			      			</div>
+						</div>
+			   	 	</div>
+			   	 	<div class="carousel-item">
+			      		<img class="d-block" src="images/slide-4.jpg" alt="Fourth slide">
+			      		<div class="carousel-caption d-none d-md-block block">
+							<h2>Предоставляем полный комплес услуг по кровле:</h2>
+			      			<div class="container">
+			      				<div class="row">
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/delivery.png">
+			      							<figcaption>
+			      								<h4>Подбор и доставка оборудования</h4>
+			      								<p>Напрямую с завода по цене ниже рыночных на 35%</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/montage.png">
+			      							<figcaption>
+			      								<h4>Профессиональный монтаж кровли</h4>
+			      								<p>Любой сложности с гарантией до 50 лет</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      					<div class="col-md-4 figure">
+			      						<figure>
+			      							<img src="images/service.png">
+			      							<figcaption>
+			      								<h4>Сервисное обслуживание и ремонт</h4>
+			      								<p>В случае необходимости в течении всего гарантийного срока!</p>
+			      							</figcaption>
+			      						</figure>
+			      					</div>
+			      				</div>
+			      			</div>
+						</div>
+			   	 	</div>
+			 	</div>
+			 	<a class="sl carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    				<span class="sr-only">Previous</span>
+  				</a>
+  				<a class="sl carousel-control-next" href="#carousel" role="button" data-slide="next">
+    				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    				<span class="sr-only">Next</span>
+  				</a>
+			</div>
+        </section>
+        <section id="about">
+            <div class="container">
+            	<h2>КРОВЛЯ <span>ПРОФИ</span> - это</h2>
+            	<div class="row">
+            		<div class="col-md-6 col-xl-5 offset-xl-1">
+            			<div class="about-block">
+            				<div class="heading">
+            					<div class="icon-container">
+            						<img src="images/ecology.png">
+            						<img src="images/line.png">
+            					</div>
+            					<div class="container-h4">
+            						<h4>Экологичность и безопасность</h4>
+            					</div>
+            				</div>
+            				<p>Наличие сертификатов качества на весь используемый строительный материал дает Вам уверенность в его экологичности и безопасности.</p>
+            			</div>
+            			<div class="about-block">
+            				<div class="heading">
+            					<div class="icon-container">
+            						<img src="images/control.png">
+            						<img src="images/line.png">
+            					</div>
+            					<div class="container-h4">
+            						<h4>Контроль расходов</h4>
+            					</div>
+            				</div>
+            				<p>Наличие сертификатов качества на весь используемый строительный материал дает Вам уверенность в его экологичности и безопасности.</p>
+            			</div>
+            		</div>
+            		<div class="col-md-6 col-xl-5">
+            			<div class="about-block">
+            				<div class="heading">
+            					<div class="icon-container">
+            						<img src="images/quality.png">
+            						<img src="images/line.png">
+            					</div>
+            					<div class="container-h4">
+            						<h4>Качество работ</h4>
+            					</div>	
+            				</div>
+            				<p>Все строители сертифицированы, осуществляется тех.надзор. Отлаженный процесс доставки и монтажа позволяет нам максимально сократить срок сдачи объекта.</p>
+            			</div>
+            			<div class="about-block">
+            				<div class="heading">
+            					<div class="icon-container">
+            						<img src="images/garanty.png">
+									<img src="images/line.png">
+            					</div>
+            					<div class="container-h4">
+            						<h4>Гарантийные обязательства</h4>
+            					</div>
+            				</div>
+            				<p>Мы даём гарантию на все наши кровельные материалы и работы до 50 лет, прописывая соответствующие пункты в договоре.</p>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+        </section>
+        <section id="gallery-1">
+            <div class="popup-gallery" style="display: flex;">
+            	<div style="width:39%">
+            		<a href="images/gallery1-1.jpg" title="The Cleaner"><img src="images/gallery1-1.jpg"></a>
+            	</div><div style="width:61%;">
+            		<div style="display: flex;">
+            			<div style="width: 41.6%;">
+            				<a href="images/gallery1-2.jpg" title="The Cleaner"><img src="images/gallery1-2.jpg" ></a>
+            			</div><div style="width: 58.4%;">
+            				<a href="images/gallery1-3.jpg" title="The Cleaner"><img src="images/gallery1-3.jpg"></a>
+            			</div>
+            		</div>
+            		<div style="display: flex;">
+            			<div style="width: 66.7%;">
+            				<a href="images/gallery1-4.jpg" title="The Cleaner"><img src="images/gallery1-4.jpg"></a>
+            			</div><div style="width: 33.3%;">
+            				<a href="images/gallery1-5.jpg" title="The Cleaner"><img src="images/gallery1-5.jpg"></a>
+            			</div>
+            		</div>
+            	</div>  
+            </div>
+        </section>  
+        <section id="price">
+            <div class="container">
+            	<h2>Цены на <span>кровельные материалы</span></h2>
+            	<div class="row">
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/met-cherep.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Металлочерепица
+            						</div>
+            						<div class="price">
+            							от 86,98 грн/м<sup>2</sup>
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/profnastil.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Профнастил
+            						</div>
+            						<div class="price">
+            							от 56,98 грн/м<sup>2</sup>
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/vodostok.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Водосточные системы
+            						</div>
+            						<div class="price">
+            							от 50 грн/м.п.
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/utep.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Утеплители
+            						</div>
+            						<div class="price">
+            							от 14,59 грн
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/siding.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Сайдинг
+            						</div>
+            						<div class="price">
+            							от 159,98 грн/м<sup>2</sup>
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/plenki.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Металлочерепица
+            						</div>
+            						<div class="price">
+            							от 8,95 грн/м<sup>2</sup>
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/pilo.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Пиломатериалы
+            						</div>
+            						<div class="price">
+            							от 2090,59 грн/м<sup>3</sup>
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            		<div class="col-sm-6 col-lg-3">
+            			<div class="product">
+            				<figure>
+            					<div class="product-img"><img src="images/met-plan.jpg"></div>
+            					<figcaption>
+            						<div class="product-name">
+            							Металлические планки
+            						</div>
+            						<div class="price">
+            							от 8 грн/м.п.
+            						</div>
+            					</figcaption>
+            				</figure>
+            				<div class="description">
+            					<div class="producer">
+            						Производители
+            					</div>
+            					<div class="metal">
+            						Металл: SSAB (Sweden), Thyssen Krupp (Germany), Arcelor Mittal (Germany, Poland), U.S.Steel (Slovakia), DONGBU (Korea, СТРУКТУРА ДЕРЕВА), Украина
+            					</div>
+            				</div>
+            			</div>
+            		</div>		
+            	</div>
+            </div>
+        </section>
+        <section id="vyezd">
+            <div class="container">
+            	<div class="row">
+            		<div class="col-md-7 col-lg-8">
+            			<h2>Мы предлагаем бесплатный выезд замерщика!</h2>
+            			<p><span>Оставьте заявку</span><br> и наш специалист приедет к Вам для:</p>
+            			<ul>
+            				<li>Детальной консультации</li>
+            				<li>Замера объекта</li>
+            				<li>Составления сметы</li>
+            			</ul>
+            		</div>
+            		<div class="col-md-5 col-lg-4">
+            			<form>
+            				<h3>Заполните форму</h3>
+            				<p>чтобы получите бесплатный выезд замерщика-консультанта!</p>
+            				<div><input type="name" id="name-house-2" name="name" placeholder="Ваше имя">
+            						<label class="name-house" for="name-house-2">*</label></div>
+            						<div>	
+            						<input type="phone" id="phone-house-2" name="phone" placeholder="Ваш телефон">
+            						<label class="phone-house" for="phone-house-2">*
+            						</label>
+            						</div>
+            					
+            					<div>
+            						<input type="e-mail" id="e-mail-house-2" name="e-mail" placeholder="Ваш e-mail">
+            						<label class="e-mail-house" for="e-mail-house-2">
+            						*
+            						</label>
+            					</div>
+            				<input class="orange" type="submit" name="get" value="Отправить">
+           				</form>		
+            		</div>
+            	</div>
+            </div>
+        </section>
+        <section id="price-table">
+            <div class="container">
+            	<h2>Цены на <span>работы</span></h2>
+            	<p><span class="red">*</span>Окончательная стоимость зависит от сложности конфигурации кровли и объёма работ</p>
+            	<div class="row">
+            		<div class="col-md-6">
+            			<table>
+            				<tr>
+            					<td>Монтаж стропильной системы</td>
+            					<td>от 49,95 грн/м2</td>
+            				</tr>
+            				<tr>
+            					<td>Монтаж обрешетки</td>
+            					<td>от 25,95 грн/м2</td>
+            				</tr>
+            				<tr>
+            					<td>Монтаж контробрешенки</td>
+            					<td>от 4 грн/м2</td>
+            				</tr>
+            				<tr>
+            					<td>Монтаж металлочерепицы</td>
+            					<td>от 45,95 грн /м2</td>
+            				</tr>
+            				<tr>
+            					<td>Монтаж профнастила</td>
+            					<td>от 45,95 грн /м2</td>
+            				</tr>
+            				<tr>
+            					<td>Монтаж битумной черепицы</td>
+            					<td>от 55,95 грн/м2</td>
+            				</tr>
+            				<tr>
+            					<td>Укладка подкладочного ковра</td>
+            					<td>от 9 грн/м2</td>
+            				</tr>
+            				<tr>
+            					<td>Устройство основания из плит OSB-3</td>
+            					<td>от 20 грн/м2</td>
+            				</tr>
+
+            			</table>
+            		</div>
+            		<div class="col-md-6">
+            			<table>
+                            <tr>
+                                <td>Монтаж желоба</td>
+                                <td>от 49,95 грн/м2</td>
+                            </tr>
+                            <tr>
+                                <td>Монтаж трубы</td>
+                                <td>от 25,95 грн/м2</td>
+                            </tr>
+                            <tr>
+                                <td>Монтаж соффита</td>
+                                <td>от 4 грн/м2</td>
+                            </tr>
+                            <tr>
+                                <td>Монтаж деревянной вагонки с покраской</td>
+                                <td>от 45,95 грн /м2</td>
+                            </tr>
+                            <tr>
+                                <td>Монтаж утеплителя</td>
+                                <td>от 45,95 грн /м2</td>
+                            </tr>
+                            <tr>
+                                <td>Монтаж пароизоляции</td>
+                                <td>от 55,95 грн/м2</td>
+                            </tr>
+                            <tr>
+                                <td>Монтаж гидроизоляции</td>
+                                <td>от 9 грн/м2</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 12px;">Оброботка стропильной системы антисептиком</td>
+                                <td>от 20 грн/м2</td>
+                            </tr>
+                        </table>
+            		</div>
+            	</div>
+            </div>
+        </section>
+        <section id="gallery-2">
+            <h2>Посмотрите на <span>выполненые нами работы:</span></h2>
+            <div class="popup-gallery" style="display: flex;">
+                <div style="width:39%">
+                    <a href="images/gallery2-1.jpg" title="The Cleaner"><img src="images/gallery2-1.jpg"></a>
+                </div><div style="width:61%;">
+                    <div style="display: flex;">
+                        <div style="width: 41.6%;">
+                            <a href="images/gallery2-2.jpg" title="The Cleaner"><img src="images/gallery2-2.jpg" ></a>
+                        </div><div style="width: 58.4%;">
+                            <a href="images/gallery2-3.jpg" title="The Cleaner"><img src="images/gallery2-3.jpg"></a>
+                        </div>
+                    </div>
+                    <div style="display: flex;">
+                        <div style="width: 66.7%;">
+                            <a href="images/gallery2-4.jpg" title="The Cleaner"><img src="images/gallery2-4.jpg"></a>
+                        </div><div style="width: 33.3%;">
+                            <a href="images/gallery2-5.jpg" title="The Cleaner"><img src="images/gallery2-5.jpg"></a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <section id="best">
+            <div class="container">
+                <h2>Мы работаем с <span>лучшими производителями:</span></h2>
+                 <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати </p>
+            	<div class="row">
+            		<div class="col-6 col-md-3">
+                        <img src="images/best-1.png">
+                    </div>
+            		<div class="col-6 col-md-3">
+                        <img src="images/best-2.png">
+                    </div>
+            		<div class="col-6 col-md-3">
+                        <img src="images/best-3.png">      
+                    </div>
+            		<div class="col-6 col-md-3">
+                        <img src="images/best-4.png">      
+                    </div>
+            	</div>
+            </div>
+        </section>
+        <section id="odessa">
+            <div class="container">
+                <h2>Кровля в Одессе</h2>
+            	<div class="row">
+                     <article>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit
+                        amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at</p>
+                    </article>
+            	</div>
+            </div>
+        </section>
+        <section id="bottom">
+            <div class="container-fluid">
+            	<div class="row" style="display: flex;"> 
+            		<div class="col-md-7">
+                        <div id="map_canvas" style="max-width: 100%; height: 100%"></div> 
+                    </div>
+            		<div class="col-md-5">
+                        <div class="questions">
+                        	<form>
+            				<h3>Остались вопросы?</h3>
+            				<p>Заполните форму ниже и наши менеджеры свяжутся с Вами!</p>
+            				<div><input type="name" id="name-house-3" name="name" placeholder="Ваше имя">
+            						<label class="name-house" for="name-house-3">*</label></div>
+            						<div>	
+            						<input type="phone" id="phone-house-3" name="phone" placeholder="Ваш телефон">
+            						<label class="phone-house" for="phone-house-3">*
+            						</label>
+            						</div>
+            					
+            					<div>
+            						<input type="e-mail" id="e-mail-house-3" name="e-mail" placeholder="Ваш e-mail">
+            						<label class="e-mail-house" for="e-mail-house-3">
+            						*
+            						</label>
+            					</div>
+            				<input class="orange" type="submit" name="get" value="Отправить">
+           				</form>
+                        </div>
+                    </div>
+            	</div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-4">
+                	<div class="footer-phones">
+                		<h5>Звоните прямо сейчас:</h5>
+                		<div>
+                			<a href="tel:+380489653245">+38 (048) 965 32 45</a>
+							<a href="tel:+380992567532">+38 (099) 256 75 32</a>
+						</div><div>
+                			<a href="tel:+380489653245">+38 (048) 965 32 45</a>
+							<a href="tel:+380992567532">+38 (099) 256 75 32</a>
+						</div>
+                	</div>
+                </div>
+            	<div class="col-md-4">
+            		<div class="footer-logo">
+            			<img src="images/logo-footer.png">
+            		</div>
+            	</div>
+            	<div class="col-md-4" style="text-align: center;">
+            		<div class="footer-rights">
+            			<p>© 2016 Кровля профи.</p>
+						<p>Все права защищены.</p>
+						<p>Сайт разработан: AVADA-MEDIA</p>
+            		</div>
+            	</div>
+        	</div>
+        </div>
+        
+    </footer>
+
+    <div id="callback">
+        <button id="callback-button" class="btn">Обратная связь</button>
+        <form class="callback-form">
+            <h4>If you have any questions write to me!</h4>
+            <label class="label-name">
+            	<input type="name" name="name" placeholder="Имя">
+            </label>
+            <label class="label-phone">
+            	<input type="phone" name="phone" placeholder="Телефон">
+            </label>
+            <label class="label-e-mail">
+            	<input type="e-mail" name="e-mail" placeholder="E-mail">
+            </label>
+            <textarea placeholder="Комментарий"></textarea>
+            <input type="submit" name="submit">
+        </form>
+    </div>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/readmore.js"></script>
+    <script>
+        $('#odessa article').readmore({
+            maxHeight: 100,
+            moreLink: '<a href="#">Читать подробнее ˅</a>',
+            lessLink: '<a href="#">Скрыть ˄</a>'
+        });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#gallery-1 .popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                }
+            }
+        });
+         $('#gallery-2 .popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function(item) {
+                    return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                }
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#callback-button').on("click", function(){
+		var text = $('#callback-button').text();
+		$('#callback-button').text(
+			text == "Обратная связь" ? "Contact  Me" : "Обратная связь");
+		$('#callback-button').toggleClass('active-btn');
+        $('#callback form').toggleClass('display-block');
+    });
+	});
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#main-menu").on("click","a", function (event) {
+            var id = $(this).attr('href'),
+                    top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    });
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+// Плавное появление элементов
+
+	jQuery('.figure').addClass("hidden").viewportChecker({
+	classToAdd: 'visible animated fadeIn',
+	offset: 100
+	});
+
+	$('.sl').click(function() {
+	
+	setTimeout(function(){
+	   $('.block').addClass("animated fadeIn visible");
+	}, 500);
+
+	});
+
+	});
+</script>
+</body>
+</html>
