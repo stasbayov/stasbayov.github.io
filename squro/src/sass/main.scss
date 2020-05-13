@@ -1,0 +1,305 @@
+@font-face {font-family: "Gilroy"; src: url("//db.onlinewebfonts.com/t/1dc8ecd8056a5ea7aa7de1db42b5b639.eot"); src: url("//db.onlinewebfonts.com/t/1dc8ecd8056a5ea7aa7de1db42b5b639.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1dc8ecd8056a5ea7aa7de1db42b5b639.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1dc8ecd8056a5ea7aa7de1db42b5b639.woff") format("woff"), url("//db.onlinewebfonts.com/t/1dc8ecd8056a5ea7aa7de1db42b5b639.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1dc8ecd8056a5ea7aa7de1db42b5b639.svg#Gilroy") format("svg"); }
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+body{
+  margin: 0;
+  font-family: "Gilroy", sans-serif;
+}
+
+@media (min-width:1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 980px;
+  }
+}
+
+.nav-item{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:hover{
+    .header__submenu{
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+    }
+  }
+  &.active{
+    .nav-link{
+      color: #ffd200;
+    }
+  }
+}
+
+.navbar-expand-md .navbar-nav .nav-link{
+  padding-left: 15px;
+  padding-right: 15px;
+  @media(max-width: 1199px){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.navbar-toggler{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  @media(max-width: 991px){
+    display: block;
+  }
+}
+
+.navbar-toggler-icon{
+  width: 25px;
+  height: 1px;
+  display: inline-block;
+  background: #ffffff;
+  position: relative;
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 25px;
+    height: 1px;
+    display: inline-block;
+    background: #ffffff;
+  }
+  &:before{
+    top: -8px;
+  }
+  &:after{
+    bottom: -8px;
+  }
+}
+
+.header{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid #414144;
+  @media (max-width:991px) {
+    height: 60px;
+  }
+  &__container{
+    height: 100%;
+    @media (max-width:1279px) {
+      width: 890px;
+    }
+    @media (max-width:1199px) {
+      width: 680px;
+    }
+    @media (max-width:991px) {
+      width: 100%;
+    }
+  }
+  &__row{
+    height: 100%;
+  }
+  &__col{
+    padding: 0;
+    position: initial;
+  }
+  &__nav{
+    height: 100%;
+    @media (max-width: 991px) {
+      height: initial;
+      right: 0;
+      top: 60px;
+      position: absolute;
+      background: #000000;
+      z-index: 16;
+      width: 290px;
+    }
+  }
+  &__navbar{
+    height: 100%;
+    position: static;
+    padding: 0;
+  }
+  &__submenu{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+    position: absolute;
+    transform: translateY(100px);
+    transition: .3s;
+    min-width: 460px;
+    background-color: #000000;
+    padding: 25px 30px;
+    border-bottom: 3px solid #ffd200;
+  }
+  &__submenu-list-container{
+    width: 50%;
+  }
+  &__submenu-list-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: #888888;
+    margin-bottom: 30px;
+  }
+  &__submenu-link{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #202020;
+    padding: 3px 0;
+  }
+  &__lang{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    @media (max-width:991px) {
+      position: static;
+    }
+    &:hover{
+      .header__lang-list{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__lang-list {
+    list-style:none;
+    margin:0;
+    padding-left:0;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    top: 20px;
+    padding-top: 10px;
+  }
+  &__lang-current{
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    padding-right: 20px;
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      display: block;
+      background: #ffffff;
+      width: 7px;
+      top: 12px;
+      height: 1px;
+    }
+    &:before{
+      transform: rotate(45deg);
+      right: 5px;
+    }
+    &:after{
+      transform: rotate(-45deg);
+      right: 1px;
+    }
+    img{
+      margin-right: 5px;
+    }
+  }
+  &__lang-item{
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+    img{
+      margin-right: 5px;
+    }
+  }
+  &__nav-collapse{
+    justify-content: space-between;
+    height: 100%;
+    @media(max-width: 991px){
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100%!important;
+      padding: 15px 10px;
+    }
+  }
+  &__nav-list{
+    height: 100%;
+    align-items: center;
+  }
+  &__btn{
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    box-shadow: none;
+    padding: 0 20px;
+    height: 36px;
+    cursor: pointer;
+    &--reg{
+      color: #ffd200;
+      border: 1px solid #ffd200;
+    }
+  }
+}
+
+.logo-container{
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  @media (max-width:767px) {
+    left: 20px;
+    top: 20px;
+  }
+}
+
+.nav-link{
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  transition: .3s ease-in-out;
+  &:hover{
+    background: rgba(0,0,0, .25);
+    color: #ffd200;
+    &:before{
+      width: 100%;
+    }
+  }
+  &:before{
+    content: '';
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    display: block;
+    background-color: #ffd200;
+    width: 0;
+    transition: .3s ease-in-out;
+  }
+}
+
+.slider-section{
+  background-color: #171717;
+  padding-top: 100px;
+  min-height: 100vh;
+  @media (max-width:991px) {
+    padding-top: 60px;
+  }
+}
+
