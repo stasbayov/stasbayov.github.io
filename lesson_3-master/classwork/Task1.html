@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Taks 1</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap" id="wrap">
+        <h1>Добавление списка элементов по условию</h1>
+
+        <header>
+          <input type="text" placeholder="" id="Receiver" >
+          <input type="submit" value="Add" id="AddToList"/>
+        </header>
+
+        <div>
+          <div id="error"></div>
+          <ul id="list"></ul>
+        </div>
+
+    </div>
+    <script>
+      /*
+        Задание:
+
+          Написать скрипт, который будет добавлять введеный в инпут Receiver текст
+          в список list.
+          Если в списке больше 5 записей, убирать Event с кнопки AddToList.
+          Кнопке AddToList добавить disabled = true
+
+          После каждого ввода очищать значение инпута
+
+          Используемые методы:
+
+          addEventListener
+          removeEventListener
+
+          document.getElementById
+          document.createElement
+
+          element.innerText
+          element.setAttribute
+          element.appendChild
+
+          Получить значение инпута: Receiver.value [Receiver - это id]
+
+      */
+
+      document.addEventListener('DOMContentLoaded', function () {
+
+          let btnSubmit = document.getElementById('AddToList');
+          let input = document.getElementById('Receiver');
+          let list = document.getElementById('list')
+          let text;
+          btnSubmit.addEventListener('click', function () {
+              if(list.children.length < 5){
+                  text = input.value;
+                  let newLi = document.createElement('li');
+                  newLi.innerText = text;
+                  list.append(newLi);
+                  input.value = '';
+              } else{
+                  this.setAttribute('disabled', 'true');
+                  this.removeEventListener('click');
+              }
+          })
+      })
+
+      let ListCount = 0;
+      let input = document.getElementById('Receiver');
+      let submit = document.getElementById('AddToList');
+      let list = document.getElementById('list');
+      let val;
+      let li;
+      submit.addEventListener('click', function test(){
+          if(ListCount < 5){
+              val = input.value;
+              li = document.createElement('li');
+              li.innerText = val;
+              list.append(li);
+              input.value = '';
+              ListCount++;
+          }
+          else{
+              submit.removeEventListener('click', test);
+              submit.setAttribute('disabled', 'true');
+          }
+      })
+
+
+
+    </script>
+  </body>
+
+
+</html>

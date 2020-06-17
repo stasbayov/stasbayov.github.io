@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 3</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap" id="wrap">
+      <h1>Переключение слайдера</h1>
+      <div class="roadMap__container yellow">
+        <button class="navButton" data-direction="<"> Prev </button>
+        <div class="roadMap">
+          <div class="roadMapPoint" data-id="1"></div>
+          <div class="roadMapPoint ball" data-id="2"></div>
+          <div class="roadMapPoint" data-id="3"></div>
+          <div class="roadMapPoint" data-id="4"></div>
+          <div class="roadMapPoint" data-id="5"></div>
+          <div class="roadMapPoint" data-id="6"></div>
+          <div class="roadMapPoint" data-id="7"></div>
+          <div class="roadMapPoint " data-id="8"></div>
+        </div>
+        <button class="navButton" data-direction=">"> Next </button>
+      </div>
+
+      <div class="roadMap__container red">
+        <button class="navButton" data-direction="<"> Prev </button>
+        <div class="roadMap">
+          <div class="roadMapPoint" data-id="1"></div>
+          <div class="roadMapPoint" data-id="2"></div>
+          <div class="roadMapPoint ball" data-id="3"></div>
+          <div class="roadMapPoint" data-id="4"></div>
+          <div class="roadMapPoint" data-id="5"></div>
+          <div class="roadMapPoint" data-id="6"></div>
+          <div class="roadMapPoint" data-id="7"></div>
+        </div>
+        <button class="navButton" data-direction=">"> Next </button>
+      </div>
+
+      <div class="roadMap__container blue">
+        <button class="navButton" data-direction="<"> Prev </button>
+        <div class="roadMap">
+          <div class="roadMapPoint" data-id="1"></div>
+          <div class="roadMapPoint ball" data-id="2"></div>
+          <div class="roadMapPoint" data-id="3"></div>
+          <div class="roadMapPoint" data-id="4"></div>
+        </div>
+        <button class="navButton" data-direction=">"> Next </button>
+      </div>
+
+      <div class="roadMap__container red">
+          <button class="navButton" data-direction="<"> Prev </button>
+          <div class="roadMap">
+            <div class="roadMapPoint" data-id="1"></div>
+            <div class="roadMapPoint ball" data-id="2"></div>
+          </div>
+          <button class="navButton" data-direction=">"> Next </button>
+        </div>
+  
+        <div class="roadMap__container blue">
+          <button class="navButton" data-direction="<"> Prev </button>
+          <div class="roadMap">
+            <div class="roadMapPoint" data-id="1"></div>
+            <div class="roadMapPoint ball" data-id="2"></div>
+            <div class="roadMapPoint" data-id="3"></div>
+            <div class="roadMapPoint" data-id="4"></div>
+          </div>
+          <button class="navButton" data-direction=">"> Next </button>
+        </div>
+    </div>
+    <script>
+
+      /*
+        Задание:
+
+        Написать скрипт, который будет приводить в действие переключалки из разметки.
+        И будет перемещать класс ball по точкам в зависимости от нажатой кнопки
+
+      */
+      let btn = document.querySelectorAll('.navButton');
+      let mapContainer;
+      let mapPoints;
+      let mapPointCur;
+      let curId;
+      btn.forEach(function (btn) {
+        btn.addEventListener('click', function(){
+          mapContainer = btn.closest('.roadMap__container');
+          mapPoints = mapContainer.querySelectorAll('.roadMapPoint')
+          mapPointCur = mapContainer.querySelector('.ball');
+          curId = mapPointCur.getAttribute('data-id');
+          mapPointCur.classList.remove('ball');
+          if(this.getAttribute('data-direction') === '<'){
+            if(curId > 1){
+              curId = curId - 2;
+              addBall();
+            } else{
+              curId = mapPoints.length - 1;
+              addBall();
+            }
+          } else {
+            if(curId < (mapPoints.length)){
+              addBall();
+            }
+            else{
+              curId = 0;
+              addBall();
+            }
+          }
+        })
+      })
+      function addBall() {
+        mapPointCur = mapPoints[curId];
+        mapPointCur.classList.add('ball')
+      }
+
+
+
+      // var containers = document.querySelectorAll('.roadMap__container');
+      //     containers.forEach( function( container ){
+      //       var ball;
+      //       let curBall;
+      //       let prevBtn = container.querySelector('.navButton[data-direction="<"]');
+      //       let nextBtn = container.querySelector('.navButton[data-direction=">"]');
+      //       let points = container.querySelectorAll('.roadMapPoint');
+      //       let pointsArr = Array.from(points);
+      //       prevBtn.addEventListener('click', function () {
+      //         ball = container.querySelector('.ball');
+      //         if(ball.dataset.id > 1){
+      //           ball.classList.remove('ball');
+      //           curBall = ball.previousElementSibling;
+      //           curBall.classList.add('ball');
+      //         }
+      //         else {
+      //           ball.classList.remove('ball');
+      //           curBall = pointsArr[pointsArr.length - 1];
+      //           curBall.classList.add('ball');
+      //         }
+      //       })
+      //       nextBtn.addEventListener('click', function () {
+      //         ball = container.querySelector('.ball');
+      //         if(ball.dataset.id < pointsArr.length){
+      //           ball.classList.remove('ball');
+      //           curBall = ball.nextElementSibling;
+      //           curBall.classList.add('ball');
+      //         }
+      //         else {
+      //           ball.classList.remove('ball');
+      //           curBall = pointsArr[0];
+      //           curBall.classList.add('ball');
+      //         }
+      //       })
+      //     })
+
+
+
+    </script>
+  </body>
+
+</html>

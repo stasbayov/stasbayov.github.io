@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS Events</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="wrap" id="wrap">
+        <h1>Welcome to JS Events</h1>
+        <button id="add" class="_target"> Add! </button>
+        <!-- <script src="js/clel.js"></script> -->
+
+        <script>
+            
+            var btn = document.getElementById('add');
+
+            var targetClass = '_target';
+        
+
+
+
+            document.addEventListener('click', function( e ){
+                console.log( 'add', e );
+
+                let status = e.target.classList.contains('_target');
+                if( status ){
+                    console.log( 'do stuff' );
+                }
+
+            });
+                
+
+        
+        </script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 2</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap" id="wrap">
+      <header>
+        <button id="HouseButton">House</button>
+        <button id="TreeButton">Tree</button>
+        <button id="PlaneButton">Plane</button>
+      </header>
+      <div id="chooseYourBlock">
+
+      </div>
+      <div id="result">
+
+      </div>
+    </div>
+    <script>
+      /*
+        Задание:
+
+        По нажатию на кнопку, в блок с id chooseYourBlock выводить иконку с нажатой кнопки:
+
+        House:  https://image.flaticon.com/icons/svg/149/149064.svg
+        Tree: https://image.flaticon.com/icons/svg/620/620705.svg
+        Plane: https://image.flaticon.com/icons/svg/579/579268.svg
+
+        Под иконкой расположить еще одну кнопку, по нажатию на которую из соответствующего массива
+        подтягивается случайная картинка с изображением в блок result.
+        Предыдущий результат очищается.
+
+        var houseArray = [
+        "https://static.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+        "https://i.pinimg.com/736x/7f/be/50/7fbe50ec634c65709d7fe6ac267c4e6f--large-garage-plans-house-plans-large-family.jpg",
+        "https://i.ytimg.com/vi/Xx6t0gmQ_Tw/maxresdefault.jpg"
+      ];
+        var planeArray = [
+        "http://www.x-plane.com/wp-content/uploads/2014/08/B777-200ER.png",
+        "https://media.cntraveler.com/photos/57067c1e9adc6caf5afe3f4c/master/pass/plane-landing-cr-getty-sb10062851ai-001.jpg",
+        "https://media.wired.com/photos/59323264a31264584499367f/master/w_1024,c_limit/diesel-plane-inline.jpg"
+      ];
+      var treeArray = [
+        "https://static.pexels.com/photos/56875/tree-dawn-nature-bucovina-56875.jpeg",
+        "https://c1.staticflickr.com/8/7218/7184786016_1ddab461e8_b.jpg",
+        "http://www.atzmut.com/wp-content/uploads/2016/01/tree.jpg"
+      ];
+
+      */
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+      let house = 'https://image.flaticon.com/icons/svg/149/149064.svg';
+      let tree = 'https://image.flaticon.com/icons/svg/620/620705.svg';
+      let plane = 'https://image.flaticon.com/icons/svg/579/579268.svg';
+      let houseArray = [
+        "https://static.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+        "https://i.pinimg.com/736x/7f/be/50/7fbe50ec634c65709d7fe6ac267c4e6f--large-garage-plans-house-plans-large-family.jpg",
+        "https://i.ytimg.com/vi/Xx6t0gmQ_Tw/maxresdefault.jpg"
+      ];
+      let planeArray = [
+        "http://www.x-plane.com/wp-content/uploads/2014/08/B777-200ER.png",
+        "https://media.cntraveler.com/photos/57067c1e9adc6caf5afe3f4c/master/pass/plane-landing-cr-getty-sb10062851ai-001.jpg",
+        "https://media.wired.com/photos/59323264a31264584499367f/master/w_1024,c_limit/diesel-plane-inline.jpg"
+      ];
+      let treeArray = [
+        "https://static.pexels.com/photos/56875/tree-dawn-nature-bucovina-56875.jpeg",
+        "https://c1.staticflickr.com/8/7218/7184786016_1ddab461e8_b.jpg",
+        "http://www.atzmut.com/wp-content/uploads/2016/01/tree.jpg"
+      ];
+      let newBtn = document.createElement('button');
+      let img = new Image();
+      let newImg = new Image(200,200);
+      let houseBtn = document.getElementById('HouseButton');
+      let treeBtn = document.getElementById('TreeButton');
+      let planeBtn = document.getElementById('PlaneButton');
+      let result = document.getElementById('result');
+      let block = document.getElementById('chooseYourBlock');
+      let newSrc;
+      houseBtn.addEventListener('click', function () {
+        newBtn.remove();
+        newImg.remove();
+        img.src = '';
+        img.src = house;
+        block.appendChild(img);
+        newBtn.innerText = 'new img';
+        block.appendChild(newBtn);
+        newBtn.addEventListener('click', function () {
+            newSrc = houseArray[getRandomInt(houseArray.length)];
+            newImg.src = newSrc;
+            result.appendChild(newImg);
+        })
+      })
+      treeBtn.addEventListener('click', function () {
+        newBtn.remove();
+        newImg.remove();
+        img.src = '';
+        img.src = tree;
+        block.appendChild(img);
+        newBtn.innerText = 'new img';
+        block.appendChild(newBtn);
+        newBtn.addEventListener('click', function () {
+            newSrc = treeArray[getRandomInt(houseArray.length)];
+            newImg.src = newSrc;
+            result.appendChild(newImg);
+        })
+      })
+      planeBtn.addEventListener('click', function () {
+        newBtn.remove();
+        newImg.remove();
+        img.src = '';
+        img.src = plane;
+        block.appendChild(img);
+        newBtn.innerText = 'new img';
+        block.appendChild(newBtn);
+        newBtn.addEventListener('click', function () {
+            newSrc = planeArray[getRandomInt(houseArray.length)];
+            newImg.src = newSrc;
+            result.appendChild(newImg);
+        })
+      })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // let choose = document.getElementById('chooseYourBlock');
+      // let houseBtn = document.getElementById('HouseButton');
+      // let treeBtn = document.getElementById('TreeButton');
+      // let planeBtn = document.getElementById('PlaneButton');
+      // let img = document.createElement('img');
+      // let houseSrc = 'https://image.flaticon.com/icons/svg/149/149064.svg';
+      // let treeSrc = 'https://image.flaticon.com/icons/svg/620/620705.svg';
+      // let planeSrc = 'https://image.flaticon.com/icons/svg/579/579268.svg';
+      // let randomBtn = document.createElement('button');
+      // randomBtn.innerText = 'Random';
+      // var houseArray = [
+      //   "https://static.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+      //   "https://i.pinimg.com/736x/7f/be/50/7fbe50ec634c65709d7fe6ac267c4e6f--large-garage-plans-house-plans-large-family.jpg",
+      //   "https://i.ytimg.com/vi/Xx6t0gmQ_Tw/maxresdefault.jpg"
+      // ];
+      // var planeArray = [
+      //   "http://www.x-plane.com/wp-content/uploads/2014/08/B777-200ER.png",
+      //   "https://media.cntraveler.com/photos/57067c1e9adc6caf5afe3f4c/master/pass/plane-landing-cr-getty-sb10062851ai-001.jpg",
+      //   "https://media.wired.com/photos/59323264a31264584499367f/master/w_1024,c_limit/diesel-plane-inline.jpg"
+      // ];
+      // var treeArray = [
+      //   "https://static.pexels.com/photos/56875/tree-dawn-nature-bucovina-56875.jpeg",
+      //   "https://c1.staticflickr.com/8/7218/7184786016_1ddab461e8_b.jpg",
+      //   "http://www.atzmut.com/wp-content/uploads/2016/01/tree.jpg"
+      // ];
+      // houseBtn.addEventListener('click', function(){
+      //   let houseBtnImg = choose.appendChild(img);
+      //   houseBtnImg.setAttribute('src', houseSrc);
+      //   choose.appendChild(randomBtn);
+      //   randomBtn.addEventListener('click', function () {
+      //     let rand = Math.floor(Math.random() * houseArray.length);
+      //     let newHouseSrc = houseArray[rand];
+      //     houseBtnImg.setAttribute('src', newHouseSrc)
+      //   })
+      // })
+      // treeBtn.addEventListener('click', function(){
+      //   let treeBtnImg = choose.appendChild(img);
+      //   treeBtnImg.setAttribute('src', treeSrc);
+      //   choose.appendChild(randomBtn);
+      //   randomBtn.addEventListener('click', function () {
+      //     let rand = Math.floor(Math.random() * treeArray.length);
+      //     let newTreeSrc = treeArray[rand];
+      //     treeBtnImg.setAttribute('src', newTreeSrc);
+      //   })
+      // })
+      // planeBtn.addEventListener('click', function(){
+      //   let planeBtnImg = choose.appendChild(img);
+      //   planeBtnImg.setAttribute('src', planeSrc);
+      //   choose.appendChild(randomBtn);
+      //   randomBtn.addEventListener('click', function () {
+      //     let rand = Math.floor(Math.random() * planeArray.length);
+      //     let newPlaneSrc = planeArray[rand];
+      //     planeBtnImg.setAttribute('src', newPlaneSrc)
+      //   })
+      // })
+    </script>
+  </body>
+</html>
